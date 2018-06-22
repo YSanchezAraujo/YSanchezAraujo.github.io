@@ -114,5 +114,12 @@ switch between branches the command is similar to when you created one however y
 ```bash
 git checkout master
 ```
+to push changes to your branch the workflow is the same as before with a small change in the `push` command:
 
+```bash
+# assuming you're in the new_branch branch
+git add new_file.txt
+git commit -m "new file in new branch"
+git push origin new_branch # see the difference here
+```
 
