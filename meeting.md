@@ -59,4 +59,24 @@ moving on, once you've made changed that you want to keep track of you add them 
 ```bash
 git add test_file.sh new_file.sh # adding them together
 ```
-the other option is to add them one by one using multiple `git add` commands after you've commited them. The reason for why you'd want to add them one by one is each might have it's own short - hopefully informative message and you don't want those to be part of the same commit.
+the other option is to add them one by one using multiple `git add` commands after you've commited them. The reason for why you'd want to add them one by one is each might have it's own short - hopefully informative message and you don't want those to be part of the same commit. There are many ways you can add things to git, for example if you've made a ton of changes and you just want to add everything at once you can use: 
+
+
+```bash
+# this will add everything in your current directory
+git add . 
+# you can do the same thing for individual sub directories
+git add dir_name
+```
+after you've added them you have to commit them using `git commit`:
+
+```bash
+git commit -m "this is the update message"
+```
+and once that's done you can push your changes so that they are reflected in the current working branch
+
+```bash
+git push origin master
+# or
+git push
+```
