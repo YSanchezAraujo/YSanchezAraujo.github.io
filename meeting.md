@@ -13,3 +13,8 @@ git add # add changes you've made
 git commit # offically add them to git's system
 git push # make the changes available for anyone else to see
 ```
+
+going about this one step at a time - open up a terminal, optinally navigate somewhere you'll remember and copy and paste this
+```
+git clone https://github.com/YSanchezAraujo/meeting.git
+```
