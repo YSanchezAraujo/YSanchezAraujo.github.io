@@ -6,6 +6,8 @@ It's a version control system (VCS) - tells you who did what when, keeps track o
 These are two different things, you can use and have git software on your machine without ever having to go onto Github.com, Github makes things far more convienent for collaborations. 
 
 <h2> Git basic usage (probably most common useage) </h2>
+
+
 ```bash
 git clone # grab a repo from some location
 git status # check what is different in your version of the repo from what git has "officially"
@@ -19,4 +21,23 @@ go to github.com, login to your account, navigate to `https://github.com/YSanche
 open up a terminal, optionally navigate somewhere you'll remember and copy and paste this (replacing `YOURUSERNAME` with the appropriate text)
 ```
 git clone https://github.com/YOURUSERNAME/meeting.git
+```
+
+now open up `test_file.sh` via your favoriate editor (I like vim) and add some lines to text - anything. Next create a new file and save it in that directory. Once your done perform a `git status`, the output should be some version of: 
+
+```bash
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test_file.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
