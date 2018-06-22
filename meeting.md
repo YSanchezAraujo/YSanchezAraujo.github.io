@@ -123,3 +123,6 @@ git commit -m "new file in new branch"
 git push origin new_branch # see the difference here
 ```
 
+typically branching is where lots of problems come up with merge conflicts, people forgetting what branch they're in and trying to do things they shouldn't in that branch, forgetting to add and commit, freaking out because of merge conflict messages and so on. The best way to try and avoid this is to always check which branch you're in if uncertain with `git branch`, which the status of your files with `git status` to see if you have any untracked or unstaged changes and fix the appropriate merge conflicts. 
+
+If you've updated the original "master" branch and you want those changes to be available in another branch **once you're in that other branch**, you can `git fetch orgin` to get those changes.  if you'd like to have your new branch become the master branch then you do `git merge origin/master`, again assuming/hoping files/changes are in order to allow for such a thing.
