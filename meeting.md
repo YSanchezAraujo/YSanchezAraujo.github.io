@@ -126,3 +126,51 @@ git push origin new_branch # see the difference here
 typically branching is where lots of problems come up with merge conflicts, people forgetting what branch they're in and trying to do things they shouldn't in that branch, forgetting to add and commit, freaking out because of merge conflict messages and so on. The best way to try and avoid this is to always check which branch you're in if uncertain with `git branch`, which the status of your files with `git status` to see if you have any untracked or unstaged changes and fix the appropriate merge conflicts. 
 
 If you've updated the original "master" branch and you want those changes to be available in another branch **once you're in that other branch**, you can `git fetch orgin` to get those changes.  if you'd like to have your new branch become the master branch then you do `git merge origin/master`, again assuming/hoping files/changes are in order to allow for such a thing.
+
+<h2>The Git less traveled</h2>
+There are a number of other commands you can perform with git, try typing `git` in the terminal, you'll get: 
+
+```bash
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+```
