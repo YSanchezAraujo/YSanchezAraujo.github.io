@@ -23,7 +23,7 @@ open up a terminal, optionally navigate somewhere you'll remember and copy and p
 git clone https://github.com/YOURUSERNAME/meeting.git
 ```
 
-now open up `test_file.sh` via your favoriate editor (I like vim) and add some lines to text - anything. Next create a new file and save it in that directory. Once your done perform a `git status`, the output should be some version of: 
+now open up `test_file.sh` via your favorite editor (I like vim) and add some lines to text - anything. Next create a new file and save it in that directory. Once you're done perform a `git status`, the output should be some version of: 
 
 ```bash
 On branch master
