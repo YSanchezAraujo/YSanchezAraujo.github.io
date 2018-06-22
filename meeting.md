@@ -175,4 +175,4 @@ concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 ```
 
-All in all, my advice would be to practice by doing - google is your friend and don't be afraid to break things as it's the case that its *really really* hard to permantely lose any work/progress you've done that has at one point or another been pushed to github. Check out http://ohshitgit.com/ to see how you might be able to work your way out of some problems. 
+All in all, my advice would be to practice by doing - google is your friend and don't be afraid to break things as it's the case that its *really really* hard to permantely lose any work/progress you've done that has at one point or another been pushed to github. Check out [oh shit git](http://ohshitgit.com/) to see how you might be able to work your way out of some problems. 
