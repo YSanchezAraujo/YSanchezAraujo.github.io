@@ -82,3 +82,6 @@ git push
 ```
 
 ![alt text](https://github.com/YSanchezAraujo/YSanchezAraujo.github.io/tree/master/images/Github.png "Logo Title Text 1")
+
+
+[logo]: https://github.com/YSanchezAraujo/YSanchezAraujo.github.io/tree/master/images/Github.png
