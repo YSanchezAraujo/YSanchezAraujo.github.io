@@ -14,7 +14,9 @@ git commit # offically add them to git's system
 git push # make the changes available for anyone else to see
 ```
 
-going about this one step at a time - open up a terminal, optinally navigate somewhere you'll remember and copy and paste this
+go to github.com, login to your account, navigate to `https://github.com/YSanchezAraujo/meeting/tree/master`, and click on the `fork` button on the top right corner. 
+
+open up a terminal, optionally navigate somewhere you'll remember and copy and paste this (replacing `YOURUSERNAME` with the appropriate text)
 ```
-git clone https://github.com/YSanchezAraujo/meeting.git
+git clone https://github.com/YOURUSERNAME/meeting.git
 ```
