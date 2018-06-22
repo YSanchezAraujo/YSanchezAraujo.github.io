@@ -82,7 +82,14 @@ git push
 ```
 
 <h4>But what is the difference between add, commit, push</h4>
-`git add` adds your modified files to the queue to be committed later, `git commit` commits the files that have been added and creates a new revision with a log, `git push` makes it so the changes are reflected in the remote directory
+`git add` adds your modified files to the queue to be committed later, `git commit` commits the files that have been added and creates a new revision with a log, `git push` makes it so the changes are reflected in the remote directory. More intuitively:
+
+
+```
+git add # selects changes
+git commit # records changes locally
+git push # shares changes remotely
+```
 
 
 <h2>Putting it together in an example</h2>
