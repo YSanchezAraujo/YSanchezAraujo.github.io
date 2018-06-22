@@ -1,6 +1,6 @@
 
 <h2>What is Git?</h2>
-It's a version control system (VCS) - tells you who did what when, keeps track of almost everything, allows you to feel safe about editing / removing lines of code. So great for collaborations of all sorts - slighly less amazing for single-human use. 
+It's a version control system (VCS) - tells you who did what when, keeps track of almost everything, allows you to feel safe about editing / removing lines of code. Great for collaborations of all sorts - slighly less amazing for lone-human use. 
 
 <h2>Git vs. Github</h2>
 These are two different things, you can use and have git software on your machine without ever having to go onto Github.com, Github makes things far more convienent for collaborations. 
@@ -40,4 +40,18 @@ Untracked files:
 	new_file.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+```
+you can also get more details of what's changed per file using `git diff`, this is what I get: 
+
+```bash
+diff --git a/test_file.sh b/test_file.sh
+index 4710eee..d6844c4 100644
+--- a/test_file.sh
++++ b/test_file.sh
+@@ -1,3 +1,5 @@
+ #!/bin/bash
+
++
++echo "MOAR LINES"
+ echo "learning about git...maybe"
 ```
