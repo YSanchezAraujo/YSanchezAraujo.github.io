@@ -81,6 +81,10 @@ git push origin master
 git push
 ```
 
+<h4>But what is the difference between add, commit, push</h4>
+`git add` adds your modified files to the queue to be committed later, `git commit` commits the files that have been added and creates a new revision with a log, `git push` makes it so the changes are reflected in the remote directory
+
+
 <h2>Putting it together in an example</h2>
 You're a researcher who works in Princeton but lives in NYC. Sometimes you work from home, sometimes in the lab, other times on the train. It use to be the case that you would email yourself the updated files, or copy them over to a portable drive to make sure you could always work on the most up to date files. Then you learned about git & github and you did away with this strategy. Now you have your set of files on github and wherever you're working from you follow the same routine:
 
