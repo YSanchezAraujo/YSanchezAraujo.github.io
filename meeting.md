@@ -95,4 +95,24 @@ git push origin master # push them so that you can pull them from another work s
 <h2> Brief look at branches </h2>
 Say you're working on some new algorithm that's part of a peice of software and you have a version that is good to go and can be used by others, but you also have some other ideas that may or may not break everything. Branching is useful here in that it creates a copy of your current work and lets you safely work on you new features without distruping the current working version. 
 
+To create a new branch and switch to it:
+
+```bash
+git checkout -b new_branch
+# now you're in a new branch, you can check which branch you're in with the command
+git branch
+# the output will look like:
+```
+
+```bash
+* master
+  new_branch
+```
+
+switch between branches the command is similar to when you created one however you ommit the `-b`
+
+```bash
+git checkout master
+```
+
 
