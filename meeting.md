@@ -55,3 +55,8 @@ index 4710eee..d6844c4 100644
 +echo "MOAR LINES"
  echo "learning about git...maybe"
 ```
+moving on, once you've made changed that you want to keep track of you add them via the `git add` command, based on the git status message above I would do:
+```bash
+git add test_file.sh new_file.sh # adding them together
+```
+the other option is to add them one by one using multiple `git add` commands after you've commited them. The reason for why you'd want to add them one by one is each might have it's own short - hopefully informative message and you don't want those to be part of the same commit.
