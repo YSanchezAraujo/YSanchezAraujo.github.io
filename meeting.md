@@ -81,3 +81,16 @@ git push origin master
 git push
 ```
 
+<h2>Putting it together in an example</h2>
+You're a researcher who works in Princeton but lives in NYC. Sometimes you work from home, sometimes in the lab, other times on the train. It use to be the case that you would email yourself the updated files, or copy them over to a portable drive to make sure you could always work on the most up to date files. Then you learned about git & github and you did away with this strategy. Now you have your set of files on github and wherever you're working from you follow the same routine:
+
+
+```bash
+git pull dir_name # to get the latest changes
+git add files # add the work you've done for the day
+git commit -m "did some work.." # commit them
+git push origin master # push them so that you can pull them from another work station later on
+```
+
+<h2> Brief look at branches </h2>
+
