@@ -4,7 +4,7 @@
 
 <h2>Introduction to Bayesian Statistics</h2> 
 
-What is Baye's Rule one might ask, well to be honest I'm not exactly sure. Though I do understand how to mechanically apply it given two or $$N$$ random variables, to answer the question of what exactly it is, is an entirely different thing and albiet, at least for me a far more difficult challenge. 
+What is Baye's Rule one might ask, well to be honest I'm not exactly sure. Though I do understand how to mechanically apply it given two or $$N$$ random variables, to answer the question of what exactly it is, is an entirely different thing and albiet, at least for me a far more difficult challenge. I suppose if I wanted to give what I feel to be a cop-out answer I'd say something like "it's a clever way to invert a probability statement to get at an otherwise difficult result".
 
 $$P(A|B) = {P(B|A)P(A) \over{P(B)}} \tag 1$$
 
