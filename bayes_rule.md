@@ -61,11 +61,11 @@ $$P(A|B) = {P(B|A)P(A)\over{P(B)}}$$
 we have that
 
 
-$$P(A|B)$$ is the posterior 
+$${P(A|B)}$$ is the posterior 
 
 and
 
-$$P(B|A)$$ is the likelihood
+$${P(B|A)}$$ is the likelihood
 
 
 $$P(A)$$ is the prior
