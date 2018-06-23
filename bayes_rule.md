@@ -59,9 +59,9 @@ $$P(A|B) = {P(B|A)P(A)\over{P(B)}}$$
 
 $$P(A|B)$$ is the posterior
 
-$$P(B|A) is the likelihood$$
+$$P(B|A)$$ is the likelihood
 
-$$P(A) is the prior$$
+$$P(A)$$ is the prior
 
 and $$P(B)$$ is the marginal likelihood
 
