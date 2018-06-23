@@ -18,3 +18,8 @@ $$P(A|B,C) = { P(B|A,C)P(A|C)P(C) \over{P(B|C)P(C)} }$$
 $$= {P(B|A,C)P(A|C) \over{P(B|C)}}$$
 
 it's important to understand that this is just one possible inversion, as you can condition any of the random variables on all the others, or any pair on the other and you'd apply the rules of conditional and total probability accordingly to get a different definition/statement. 
+
+
+If that doesn't make much sense to you then I suppose I got ahead of myself. To understand Bayes rule it's required to understand the concepts of joint probability, conditional probility, and total probability. So let's first take a look at joint probability: 
+
+$$P(A,B) = P(A|B)P(B) = P(B|A)P(A)$$
