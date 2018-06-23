@@ -9,7 +9,8 @@ What is Baye's Rule one might ask, well to be honest I'm not exactly sure. Thoug
 $$P(A|B) = {P(B|A)P(A) \over{P(B)}}$$
 
 
-what you see above is an inversion of the conditional probability statement for the two random variables $$A$$ and $$B$$. This isn't limited to just two random varialbes
+what you see above is an inversion of the conditional probability statement for the two random variables $$A$$ and $$B$$. This isn't limited to just two random variables, let's take a look at what it would be for 3 of them at a time
 
 
-$$P(A|B,C,D) = {P(B|A,C,D)P(A|C,D)P(C|D)P(D) \over{ P(B|C,D)P(C|D)P(D)}}$$
+$$P(A|B,C) = { P(B|A,C)P(A|C)P(C) \over {P(B|C)P(C)} }$$
+$$=P(B|A,C)P(A|C) \over{P(B|C)}$$
