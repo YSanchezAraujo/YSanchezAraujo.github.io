@@ -35,7 +35,7 @@ $$P(A,B) = P(B|A)P(A)$$
 
 $$= {P(B|A) = {P(A,B)\over{P(A)}}}$$ \tag 3
 
-alright so now hopefully we can see how to use the result above with equation 2, if you look at equation 2 you can see that you move around the probabilities of the random varaibles on the right side to get either $$P(A|B)$$ or $$P(B|A)$$ alone. Lets do that now: 
+alright so now hopefully we can see how to use the result above with equation 2, if you look at equation 2 you can see that it's possible to move around the probabilities of the random varaibles on the right side to get either one alone. Lets do that now: 
 
 $$P(B|A) = {P(A|B)P(B) \over {P(A)}}$$ \tag 4
 
