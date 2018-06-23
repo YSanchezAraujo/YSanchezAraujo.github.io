@@ -47,3 +47,5 @@ equation 4 above is exactly the same as equation 3 with:
 
 
 $$P(A|B)P(B) = P(A,B)$$
+
+a result which we've already defined in equation 2! At this point I'm sure it all just seems like algebraic mumbo-jumbo, but remember the algebra holds and when you relate these probabilty statements such as $$P(A|B)$$ to real world events such as the probabilty of a car crash given rain, you start to see how this is a rather general way to compute probabilities of things. 
