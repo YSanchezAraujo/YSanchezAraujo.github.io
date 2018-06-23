@@ -63,6 +63,7 @@ we have that
 
 $$P(A|B)$$ is the posterior 
 
+and
 
 $$P(B|A)$$ is the likelihood
 
