@@ -6,7 +6,7 @@
 
 What is Baye's Rule one might ask, well to be honest I'm not exactly sure. Though I do understand how to mechanically apply it given two or $$N$$ random variables, to answer the question of what exactly it is, is an entirely different thing and albiet, at least for me a far more difficult challenge. 
 
-$$P(A|B) = {P(B|A)P(A) \over{P(B)}}$$
+$$P(A|B) = {P(B|A)P(A) \over{P(B)}} \tag 1$$
 
 
 what you see above is an inversion of the conditional probability statement for the two random variables $$A$$ and $$B$$. This isn't limited to just two random variables, let's take a look at what it would be for 3 of them at a time
@@ -22,7 +22,7 @@ it's important to understand that this is just one possible inversion, as you ca
 
 If that doesn't make much sense to you then I suppose I got ahead of myself. To understand Bayes rule it's required to understand the concepts of joint probability, conditional probility, and total probability. So let's first take a look at joint probability: 
 
-$$ P(A,B) = P(A|B)P(B) = P(B|A)P(A) \tag 1$$
+$$ P(A,B) = P(A|B)P(B) = P(B|A)P(A) \tag 2$$
 
 now let's take just one of the statements on the right hand side: 
 
@@ -33,4 +33,12 @@ and let's do some algebra after equating it to the left hand side $$P(A,B)$$
 
 $$P(A,B) = P(B|A)P(A)$$
 
-$$= {P(B|A) = {P(A,B)\over{P(A)}}}$$
+$$= {P(B|A) = {P(A,B)\over{P(A)}}}$$ \tag 3
+
+alright so now hopefully we can see how to use the result above with equation 2, if you look at equation 2 you can see that you move around the probabilities of the random varaibles on the right side to get either $$P(A|B)$$ or $$P(B|A)$$ alone. Lets do that now: 
+
+$$P(B|A) = {P(A|B)P(B) \over {P(A)}}$$ \tag 4
+
+equation there is exactly the same as equation 3 with: 
+
+$$P(A|B)P(B) = P(A,B)$$
