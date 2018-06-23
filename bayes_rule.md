@@ -58,6 +58,9 @@ By the way, if you're somewhat familiar with these ideas and you're wondering wh
 $$P(A|B) = {P(B|A)P(A)\over{P(B)}}$$
 
 
+we have that
+
+
 $$P(A|B)$$ is the posterior 
 
 
