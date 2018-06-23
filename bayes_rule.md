@@ -2,13 +2,8 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<h2>Testing equation viewing..hopefully!!!!</h2> 
+<h2>Introduction to Bayesian Statistics</h2> 
 
+The concept of bayes rule today seems to permeate almost all advanced statistical applications. Notice though that I said **concept** and not really the mechanical application of bayes rule itself. Despite what I've just put forth, let's get into the mechanics anyways as I think it's useful when looking at definitions. 
 
-
-$$\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}$$
-
-
- {% raw %}
-  $$a^2 + b^2 = c^2$$
- {% endraw %}
+$$P(A|B) = P(B|A)P(A) \over{P(B)}}$$
