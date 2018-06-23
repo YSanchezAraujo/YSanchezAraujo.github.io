@@ -43,7 +43,7 @@ alright so now hopefully we can see how to use the result above with equation 2,
 $$P(B|A) = {P(A|B)P(B) \over {P(A)}} \tag 4$$
 
 
-equation there is exactly the same as equation 3 with: 
+equation 4 above is exactly the same as equation 3 with: 
 
 
 $$P(A|B)P(B) = P(A,B)$$
