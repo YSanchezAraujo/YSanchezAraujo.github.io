@@ -52,4 +52,4 @@ $$P(A|B)P(B) = P(A,B)$$
 a result which we've already defined in equation 2! At this point I'm sure it all just seems like algebraic mumbo-jumbo, but remember the algebra holds and when you relate these probabilty statements such as those above to real world events like the probabilty of a car crash given rain, you start to see how this is a rather general way to compute probabilities of things. 
 
 
-Alright, let's carry out a more concrete application of bayes rule using a coin flip. Assuming we have a fair coin we know that the probability of heads is $$1\over{2}$$, which we'll denote as $$p(h)$$
+Alright, let's carry out a more concrete application of bayes rule using a coin flip. Assuming we have a fair coin we know that the probability of heads is $$1\over{2}$$, which we'll denote as $$p(h)$$, given this we know that the probabily of tails is $$1 - p(h)$$, because proper probabilties can only range between 0 and 1, so define $$p(t) = 1 - p(h)$$
