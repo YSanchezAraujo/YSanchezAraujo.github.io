@@ -33,4 +33,4 @@ and let's do some algebra after equating it to the left hand side $$P(A,B)$$
 
 $$P(A,B) = P(B|A)P(A)$$
 
-$$= {P(B|A) = P(A,B)\over{P(A)}}$$
+$$= {P(B|A) = {P(A,B)\over{P(A)}}}$$
