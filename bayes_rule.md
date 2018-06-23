@@ -15,4 +15,4 @@ what you see above is an inversion of the conditional probability statement for 
 $$P(A|B,C) = { P(B|A,C)P(A|C)P(C) \over{P(B|C)P(C)} }$$
 
 
-$$=P(B|A,C)P(A|C) \over{P(B|C)}$$
+$$= {P(B|A,C)P(A|C) \over{P(B|C)}}$$
