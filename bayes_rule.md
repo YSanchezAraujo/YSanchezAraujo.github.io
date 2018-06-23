@@ -12,7 +12,7 @@ $$P(A|B) = {P(B|A)P(A) \over{P(B)}}$$
 what you see above is an inversion of the conditional probability statement for the two random variables $$A$$ and $$B$$. This isn't limited to just two random variables, let's take a look at what it would be for 3 of them at a time
 
 
-$$P(A|B,C) = { P(B|A,C)P(A|C)P(C) \over {P(B|C)P(C)} }$$
+$$P(A|B,C) = { P(B|A,C)P(A|C)P(C) \over{P(B|C)P(C)} }$$
 
 
 $$=P(B|A,C)P(A|C) \over{P(B|C)}$$
