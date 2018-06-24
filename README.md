@@ -2,3 +2,4 @@
 [**Github**](https://YSanchezAraujo.github.io/meeting)
 
 <h2>Math</h2>
+[**Bayes Rule**](https://ysanchezaraujo.github.io/bayes_rule)
