@@ -12,4 +12,4 @@ $$x \times p(x)$$
 
 where $$x$$ is the observation's value and $$p(x)$$ is a probability function returning a number that tells you the relative likelihood of the "seeing" the observation. When we have many samples, $$N$$ of them then we compute the expectation as: 
 
-$$\sum_{i=1}^N \Bigl[ x \times p(x) \BigR]$$
+$$\sum_{i=1}^N \Bigl[ x_i \times p(x_i) \Bigr]$$
