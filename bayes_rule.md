@@ -2,7 +2,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 
-[revert to state $$x_0$$](https://ysanchezaraujo.github.io/)
+[home](https://ysanchezaraujo.github.io/)
 
 <h2>Bayes rule blurb</h2> 
 
