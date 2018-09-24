@@ -2,7 +2,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<h2>Bayes rule blrub</h2> 
+<h2>Bayes rule blurb</h2> 
 
 What is Baye's Rule one might ask, well to be honest I'm not exactly sure. Though I do understand how to mechanically apply it given two or $$N$$ random variables, to answer the question of what exactly it is, is an entirely different thing and albiet, at least for me a far more difficult challenge. I suppose if I wanted to give what I feel to be a cop-out answer I'd say something like "it's a clever way to invert a probability statement to get at an otherwise difficult or unavailable result". So for example, perhaps we don't know the probability of rain given a car crash but we do know the probability of a car crash given rain, using bayes rule we can get at what the probability of rain given a car crash is. 
 
