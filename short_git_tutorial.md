@@ -3,7 +3,9 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 
-[revert to state $$x_0$$](https://ysanchezaraujo.github.io/)
+[home](https://ysanchezaraujo.github.io/)
+
+
 
 <h2>What is Git?</h2>
 It's a version control system (VCS) - tells you who did what when, keeps track of almost everything, allows you to feel safe about editing / removing lines of code. Great for collaborations of all sorts - slighly less amazing for lone-human use. 
