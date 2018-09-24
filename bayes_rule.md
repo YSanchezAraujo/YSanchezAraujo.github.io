@@ -61,4 +61,10 @@ $$P(A|B) = {P(B|A)P(A)\over{P(B)}}$$
 we have that the prior is $$P(A)$$, and the likelihood is $$P(B \vert A)$$, $$P(A \vert B)$$ is the posterior, and $$P(B)$$ is the marginal likelihood. 
 
 
-Alright, let's carry out a more concrete application of bayes rule using a coin flip. Assuming we have a fair coin we know that the probability of heads is $$1\over{2}$$, which we'll denote as $$p(h)$$, given this we know that the probabily of tails is $$1 - p(h)$$, because proper probabilties can only range between 0 and 1, so define $$p(t) = 1 - p(h)$$ ... to be completed
+Alright, let's carry out a more concrete application of bayes rule using a coin flip. Assuming we have a fair coin we know that the probability of heads is $$1\over{2}$$, which we'll denote as $$p(h)$$, given this we know that the probabily of tails is $$1 - p(h)$$, because proper probabilties can only range between 0 and 1, so define $$p(t) = 1 - p(h)$$. Now suppose to fliped the coin once and observed a tails, and we want to ask the question, what is the probability that the coin is fair, given that we observed a tail. Written out this is: 
+
+$$P(F|X=t)$$
+
+and we can apply bayes rule to get: 
+
+$$P(F|X=t) = {P(X=t|F)P(F)\over{\int_F* P(X=t|F*)P(F*)dF}}$$
