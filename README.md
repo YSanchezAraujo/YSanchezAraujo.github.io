@@ -1,4 +1,3 @@
-[home](https://ysanchezaraujo.github.io/)
 
 <h2>Resources</h2>
 
