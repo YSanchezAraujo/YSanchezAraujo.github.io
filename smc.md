@@ -2,6 +2,8 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 
+<h1>[revert to state $$$x_0$](https://ysanchezaraujo.github.io/)</h1>
+
 <h2>Intuition?</h2> 
 
 There's a lot to say about sequential monte carlo and I'm not qualified to say most of it. Happily though, there are some things I can understand, or trick myself into thinking that I understand. So, here goes: 
