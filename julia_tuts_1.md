@@ -1,3 +1,11 @@
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+[home](https://ysanchezaraujo.github.io/)
+
+
 # Preliminaries: Installing Julia
 
 Before we can go about doing anything we'll first need to install the tools that will allow us to conduct our work. Here I'll briefly give a step by step account of how to install Julia for Linux based operating systems, and I'll give a pointer to Mac and Windows Based systems, as those come with ready-made installers so to speak. 
