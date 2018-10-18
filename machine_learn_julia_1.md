@@ -22,6 +22,22 @@ cd ~
 mkdir bin
 # now move the julia folder that you downloaded to this directory
 mv ~/Downloads/julia-1.0.1 bin/
-# now we're going to create a short mapping in your systems .bashrc file so that it knows where to look for the binary
-
+# now we're going to create a short mapping in your systems 
+# .bashrc file so that it knows where to look for the binary
+# you will need to open this file via gedit or vim or whichever
+# text editor you have available
+# add the followng line in the file
+alias julia="/home/yoel/bin/julia-1.0.1/bin/julia"
+# again remember to change that path so that it's the one for your system!
+# once you've done this save and close the file and source your .bashrc again: 
+source ~/.bashrc
+# now we should be able to start up julia type "julia" in your terminal: 
+julia
 ```
+
+and viola! if you've gotten this far then the interpreter for Julia should have started up and you should be met with: 
+
+```julia
+julia>
+```
+
