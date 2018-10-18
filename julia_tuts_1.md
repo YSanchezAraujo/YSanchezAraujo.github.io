@@ -74,5 +74,6 @@ for example. So Pkg is a package that adds other packages for us thus greatly si
 
  * how to download and install julia
  * how to start up and install julia packages
+ * that I unnecessarily ramble
 
 those are most of the things you'll need for now. 
