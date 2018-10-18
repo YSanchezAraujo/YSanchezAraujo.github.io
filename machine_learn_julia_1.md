@@ -48,4 +48,18 @@ Pkg.add.(["DataFrames", "Distributions", "GLM", "MixedModels", "Conda", "PyPlot"
 using Conda
 Conda.add("scipy") # we'll need this for plotting
 ```
-So let's try to break this down a bit, `Pkg` is itself a package thought it comes ready with Julia so we don't need to download and install it, we just need to bring it into the uhhh "enviornment" of our interpreter. **ASIDE I'm being intentional about not commiting to a particular use of vocabulary for the word environment in this context, hence the quotes. A proper treatment of the complexity going on would involve diving into namespaces, scopes, and a few other things which I will not do**
+So let's try to break this down a bit, `Pkg` is itself a package thought it comes ready with Julia so we don't need to download and install it, we just need to bring it into the uhhh "enviornment" of our interpreter. 
+
+**ASIDE**: I'm being intentional about not commiting to a particular use of vocabulary for the word environment in this context, hence the quotes. A proper treatment of the complexity going on would involve diving into namespaces, scopes, and a few other things which I will not do
+
+Anyhow, back to work ... when using the `using` keyword we are bringing in the functionality of the thing that goes after it: 
+
+```julia
+using Pkg
+```
+once we have that functionality available to us we can well, use it: 
+
+```julia
+Pkg.add("GLM")
+```
+for example. So Pkg is a package that adds other packages for us thus greatly simplifying the process of installing additonal software(I hope you appreciate how nice life has been made for you in this respect! though to be fair appropriately so as if that was such a headache then no one would download and use Julia, and so you can follow the reasoning from there). 
