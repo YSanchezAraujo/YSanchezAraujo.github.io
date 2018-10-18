@@ -52,7 +52,7 @@ Alright that's great and all but now we need to continue to download and install
 
 ```julia
 using Pkg
-Pkg.add.(["DataFrames", "Distributions", "GLM", "MixedModels", "Conda", "PyPlot"])
+Pkg.add.(["DataFrames", "Distributions", "GLM", "MixedModels", "Conda", "PyPlot", "CSV"])
 using Conda
 Conda.add("scipy") # we'll need this for plotting
 ```
