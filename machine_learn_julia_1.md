@@ -62,4 +62,9 @@ once we have that functionality available to us we can well, use it:
 ```julia
 Pkg.add("GLM")
 ```
-for example. So Pkg is a package that adds other packages for us thus greatly simplifying the process of installing additonal software(I hope you appreciate how nice life has been made for you in this respect! though to be fair appropriately so as if that was such a headache then no one would download and use Julia, and so you can follow the reasoning from there). 
+for example. So Pkg is a package that adds other packages for us thus greatly simplifying the process of installing additonal software(I hope you appreciate how nice life has been made for you in this respect! though to be fair appropriately so as if that was such a headache then no one would download and use Julia, and so you can follow the reasoning from there). So this pretty much wraps up this section. In summary what we've learned so far: 
+
+ * how to download and install julia
+ * how to start up and install julia packages
+
+those are most of the things you'll need for now. 
