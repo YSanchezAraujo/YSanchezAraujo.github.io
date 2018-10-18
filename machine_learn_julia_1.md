@@ -48,3 +48,4 @@ Pkg.add.(["DataFrames", "Distributions", "GLM", "MixedModels", "Conda", "PyPlot"
 using Conda
 Conda.add("scipy") # we'll need this for plotting
 ```
+So let's try to break this down a bit, `Pkg` is itself a package thought it comes ready with Julia so we don't need to download and install it, we just need to bring it into the uhhh "enviornment" of our interpreter. **ASIDE I'm being intentional about not commiting to a particular use of vocabulary for the word environment in this context, hence the quotes. A proper treatment of the complexity going on would involve diving into namespaces, scopes, and a few other things which I will not do**
