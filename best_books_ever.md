@@ -13,3 +13,5 @@
 
 <h2>Papers</h2>
 [Graphical models](https://pdfs.semanticscholar.org/f2e7/225bf16ce1503c692d021684b6dcdcb4b29c.pdf)
+
+[Variational EM](http://www.cs.uoi.gr/~arly/papers/SPM08.pdf)
