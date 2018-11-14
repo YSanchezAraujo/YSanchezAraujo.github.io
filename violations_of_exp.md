@@ -17,9 +17,21 @@ but then say on some other day you forget to put any food in the microwave and y
 
 ```julia
 function microwave(container, food)
-    if food:
+    if food
         return hot(container, food)
     end
-        return container
+    return container
+end
+```
+
+So, what can this say about how we might reason in this situation? Well, consider the first function definition above, notice that `stuff` is the representation of everything that goes into the microwave, we treat it as a unit, and we treat the microwave essentially as a universal warmer of things. From this first encounter we have some expectation of what the output looks like given inputs to the microwave. Then when we forget to put anything with water molecules to vibrate, and hence to heat up into the microwave, the outcome violates the causal relationship we've built up. What might we do then? Well, second function definition hints at that we start to deconstruct what we've previously chunked together as a single unit. OK, so let's take this one step further, imagine successive episodes of expectation -> surpise -> expectation -> surprise ..... and so on. How might we represent this as a function? 
+
+```julia
+function learn_things(chunk, prior_expectation)
+    if holds_within_error(chunk, prior_expectation)
+        return transformation_to_input(chunk)
+    else
+        return learn_things(deconstruct(chunk), adjust(prior_expectation))
+    end
 end
 ```
