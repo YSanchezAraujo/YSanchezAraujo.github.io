@@ -37,3 +37,5 @@ end
 ```
 
 Of course this is just a simple thought experiment but assume that the last function definition, `learn_things` is some approximation to what happens in these scenarios, what the heck then is `holds_within_error` ? Is this a case-specific function? Do we have some general form for it? Does `holds_within_error` itself come from a bag of functions that all have some common feature, thus inducing a correlation between possible error functions that themselves are meant to an extent test the correlations (in the general-nonlinear sense) between our past and present experiences? Also, can we ask the same questions about the `deconstruct` and `adjust` functions? 
+
+Here's another (I think interesting) point, what about the possible set of things that `deconstruct(input)` returns? How should that be represented? One obvious representation is that it induces a probability distribution over its possible outputs conditional on it's inputs. But then, how is this probability distribution even constructed to begin with? 
