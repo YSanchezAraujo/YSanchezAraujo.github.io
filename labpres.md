@@ -3,7 +3,7 @@ function act(softmax(...))
     ...
 end
 
-function act(categorize(...))
+function categorize(...)
     ...
 end
 ```
