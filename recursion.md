@@ -182,4 +182,4 @@ $$\overline{P(x_t)} = \int P(x_t | x_{t-1}, a_t) \times P(x_{t-1}) dx_{t-1}$$
 this now allows us to change $$(6)$$ to become: 
 
 $$P(x_t) \propto P(y_t|x_t) \times \overline{P(x_t)}$$
-<h1>TO BE COMPLETED</h1>
+
