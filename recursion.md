@@ -177,9 +177,9 @@ $$(6)$$, and our intergral and $$dx_{t-1}$$ notation is telling us we've done th
 $$t=1$$. Again we can see from one of the identities introduced, $$(7)$$, that the first term of $$(9)$$ is reduced to
 $$P(x_t | x_{t-1}, a_t)$$. Putting these facts together $$(9)$$ becomes:
 
-$$\hat{P(x_t)} = \int P(x_t | x_{t-1}, a_t) \times P(x_{t-1}) dx_{t-1}$$
+$$\hat P(x_t) = \int P(x_t | x_{t-1}, a_t) \times P(x_{t-1}) dx_{t-1}$$
 
 this now allows us to change $$(6)$$ to become: 
 
-$$P(x_t) \propto P(y_t|x_t) \times \hat{P(x_t)}$$
+$$P(x_t) \propto P(y_t|x_t) \times \hat P(x_t)$$
 
