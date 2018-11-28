@@ -164,8 +164,8 @@ new identities:
 
 **Probablistic generative laws**
 
-$$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 5$$
+$$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 6$$
 
-$$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 6$$
+$$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 7$$
 
 <h1>TO BE COMPLETED</h1>
