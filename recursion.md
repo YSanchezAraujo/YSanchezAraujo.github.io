@@ -156,7 +156,7 @@ $$P(x_t | y_{1:t}, a_{1:t})$$
 
 now we can use Bayes rule to reason about seeing $$y_{t}$$, if the state was $$x_t$$ and our history: 
 
-$$P(x_t | y_{1:t}, a_{1:t}) \propto { P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t}) }$$
+$$P(x_t | y_{1:t}, a_{1:t}) \propto { P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t}) } \tag 6$$
 
 the the symbol $$\propto$$ says it's proportional instead of equal to. This is because there's a term in the denominator, 
 the normalizing constant $$P(y_t | y_{1:t-1}, a_{1:t})$$ that I've ommitted. To move forward we need to introduce two
@@ -164,8 +164,19 @@ new identities:
 
 **Probablistic generative laws**
 
-$$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 6$$
+$$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 7$$
 
-$$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 7$$
+$$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 8$$
+
+using $$(8)$$ we can see that the first term in $$(6)$$ is reduced to $$P(y_t|x_t)$$. Now we take a look at the second term
+in $$(6)$$. We now need to bring in the idea of recursion and reason about what the current state $$x_t$$ might be in terms 
+of our past beliefs. We can rewrite the second term in $$(6)$$ as:
+
+$$\int P(x_t | x_{t-1}, y_{1:t-1}, a_{1:t}) \times P(x_{t-1}|, y_{1:t-1}, a_{1:t})dx_{t-1} \tag 9$$
+
+there are two things to notice here, the second term of $$(9)$$ is the $$t-1$$ version of expression
+$$(6)$$, and our intergral and $$dx_{t-1}$$ notation is telling us we've done this recursively, all the way from the start at
+$$t=1$$
+
 
 <h1>TO BE COMPLETED</h1>
