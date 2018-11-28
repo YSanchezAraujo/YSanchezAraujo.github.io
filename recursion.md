@@ -119,8 +119,8 @@ refer to a proper text book for clarity):
 
 **Chain rule of probability**
 
-$$P(a | b, c) = P(a|b, c) \times P(b|c) \times P(c)$$
+$$P(A | B, C) = P(A|B, C) \times P(B|C) \times P(C)$$
 
 **Bayes rule**
 
-$$P(a | b, c) = {   {P(b | a, c) \times P(a | c)} \over{P(b | c)} }$$
+$$P(A | B, C) = {   {P(B | A, C) \times P(A | C)} \over{P(B | C)} }$$
