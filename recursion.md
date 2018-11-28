@@ -156,8 +156,7 @@ $$P(x_t | y_{1:t}, a_{1:t})$$
 
 now we can use Bayes rule to reason about seeing $$y_{t}$$, if the state was $$x_t$$ and our history: 
 
-$$P(x_t | y_{1:t}, a_{1:t}) = {{P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t})} \over{P(y_t|y_{1:t-1}, a_{1:t}})}}$$
 
-
+$$P(x_t | y_{1:t}, a_{1:t}) = { P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t}) }$$
 
 <h1>TO BE COMPLETED</h1>
