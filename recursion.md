@@ -112,3 +112,14 @@ X_random = np.random.random(1000)
 np.isclose(np.mean(X_random), recursive_mean(1, 0, X_random))
 
 ```
+
+Alright so, now we add the tools of probability. By no means is this meant to be a self-contained refresher on probability but
+here are the two main facts we'll need (there are some assumptions here that I'm not stating ... I think so it's best to
+refer to a proper text book for clarity):
+
+**Chain rule of probability**
+
+$$P(a | b, c) = P(a|b, c) \times P(b|c) \times P(c)$$
+
+**Bayes rule**
+$$P(a | b, c) = {P(b |a, c)\times P(a|c)}\over{P(b, c)}$$
