@@ -183,4 +183,6 @@ this now allows us to change $$(6)$$ to become:
 
 $$P(x_t) \propto P(y_t|x_t) \times \hat P(x_t)$$
 
-<h1>General Bayesian filter<\h1>
+<h1>General Bayesian filter</h1>
+
+To be completed
