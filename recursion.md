@@ -143,3 +143,4 @@ when refering to a sequence of them we'll write $$x_{j:k}$$. $$y$$ denotes obser
 sequences of them: $$y_{j:k}$$. $$a$$ will denote an action that is taken and again we can have a sequence of them:
 $$a_{j:k}$$
 
+<h1>TO BE COMPLETED</h1>
