@@ -105,10 +105,10 @@ def recursive_mean(t, mu, data):
         mu_k = mu + 1/t * (data[t-1] - mu)
         return recursive_mean(t+1, mu_k, data)
 
-np.allclose(np.mean(X), recursive_mean(1, 0, X))
+np.isclose(np.mean(X), recursive_mean(1, 0, X))
 
 X_random = np.random.random(1000)
 
-np.allclose(np.mean(X_random), recursive_mean(1, 0, X_random))
+np.isclose(np.mean(X_random), recursive_mean(1, 0, X_random))
 
 ```
