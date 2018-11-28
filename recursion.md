@@ -156,7 +156,16 @@ $$P(x_t | y_{1:t}, a_{1:t})$$
 
 now we can use Bayes rule to reason about seeing $$y_{t}$$, if the state was $$x_t$$ and our history: 
 
+$$P(x_t | y_{1:t}, a_{1:t}) \propto { P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t}) }$$
 
-$$P(x_t | y_{1:t}, a_{1:t}) = { P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t}) }$$
+the the symbol $$\propto$$ says it's proportional instead of equal to. This is because there's a term in the denominator, 
+the normalizing constant $$P(y_t | y_{1:t-1}, a_{1:t})$$ that I've ommitted. To move forward we need to introduce two
+new identities:
+
+**Probablistic generative laws**
+
+$$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 5$$
+
+$$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 6$$
 
 <h1>TO BE COMPLETED</h1>
