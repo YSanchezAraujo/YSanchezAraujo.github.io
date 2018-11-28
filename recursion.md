@@ -48,20 +48,12 @@ $$\mu_{t-1} = {1\over (t-1)}\sum_{k=1}^{t-1}x_k \tag 3$$
 
 using this we can write the that $$(2)$$ is equal to: 
 
-$$ {1\over t} \left(x_t + (t-1)\mu_{t-1} \right) \tag 4$$
+$$  = {1\over t} \left(x_t + (t-1)\mu_{t-1} \right) \tag 4$$
 
+then we distribute, rearrange, and factor out a $$t$$ to get that $$(4)$$ is equal to:
 
-blah lbah
+$$= \mu_{t-1} + {1\over t} \left(x_t - \mu_{t-1} \right) \tag 5$$
 
+and so we have that we can recursively compute the mean through discrete intervals by: 
 
-$$= {1\over k} \left(x_k + (k-1)\mu_{k-1} \right) \tag 3$$
-$$ = \mu_{k-1} + {1\over k} \left(x_k - \mu_{k-1} \right) $$
-
-
-thanks to the comments it's done by using the definition of $\mu_{k-1}$
-
-$$\mu_{k-1} = {1\over (k-1)}\sum_{j=1}^{k-1}x_j$$
-
-so indeed it is equal: 
-
-$$ \sum_{j=1}^{k-1}x_j =  (1-k)* {1\over (k-1)}\sum_{j=1}^{k-1}x_j$$
+$$\mu_t = {1\over{t}} \sum_{k=1}^t x_k = \mu_{t-1} + {1\over t} \left(x_t - \mu_{t-1} \right$$
