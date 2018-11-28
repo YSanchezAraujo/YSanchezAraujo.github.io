@@ -162,8 +162,6 @@ the the symbol $$\propto$$ says it's proportional instead of equal to. This is b
 the normalizing constant $$P(y_t | y_{1:t-1}, a_{1:t})$$ that I've ommitted. To move forward we need to introduce two
 new identities:
 
-**Probablistic generative laws**
-
 $$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 7$$
 
 $$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 8$$
@@ -176,7 +174,10 @@ $$\int P(x_t | x_{t-1}, y_{1:t-1}, a_{1:t}) \times P(x_{t-1}|, y_{1:t-1}, a_{1:t
 
 there are two things to notice here, the second term of $$(9)$$ is the $$t-1$$ version of expression
 $$(6)$$, and our intergral and $$dx_{t-1}$$ notation is telling us we've done this recursively, all the way from the start at
-$$t=1$$
+$$t=1$$. Again we can see from one of the identities introduced, $$(7)$$, that the first term of $$(9)$$ is reduced to
+$$P(x_t | x_{t-1}, a_t)$$. Putting these facts together $$(9)$$ becomes:
+
+$$\int P(x_t | x_{t-1}, a_t) \times P(x_{t-1}) dx_{t-1}$$
 
 
 <h1>TO BE COMPLETED</h1>
