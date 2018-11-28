@@ -42,8 +42,20 @@ just to be clear, right now we have:
 
 $$\mu_t = {1\over{t}} \sum_{k=1}^t x_k = {1\over t} \left( x_{t} + \sum_{k=1}^{t-1}x_k \right) $$
 
+the next step is to use $$(1)$$ and manipulate the index:
+
+$$\mu_{t-1} = {1\over (t-1)}\sum_{k=1}^{t-1}x_k \tag 3$$
+
+using this we can write the that $$(2)$$ is equal to: 
+
+$$ {1\over t} \left(x_t + (t-1)\mu_{t-1} \right) \tag 4$$
+
+
+blah lbah
+
+
 $$= {1\over k} \left(x_k + (k-1)\mu_{k-1} \right) \tag 3$$
-$$ = \mu_{k-1} + {1\over k} \left(x_k - \mu_{k-1} \right) \tag 4$$
+$$ = \mu_{k-1} + {1\over k} \left(x_k - \mu_{k-1} \right) $$
 
 
 thanks to the comments it's done by using the definition of $\mu_{k-1}$
