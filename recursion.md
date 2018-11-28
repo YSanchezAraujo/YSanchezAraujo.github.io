@@ -2,6 +2,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 
+<h1>Recursive mean</h1>
 A lot of the work I'm currently doing involves making use of recursive conditional probability formulas to compute beliefs
 about some posterior distribution. Here I'll try to clearly lay out how this works, first starting with a recursive
 program in Julia. It's a simple function that adds its two inputs by recursively removing one unit from its first argument
@@ -112,7 +113,7 @@ X_random = np.random.random(1000)
 np.isclose(np.mean(X_random), recursive_mean(1, 0, X_random))
 
 ```
-
+<h1>Adding probabilities</h1>
 Alright so, now we add the tools of probability. By no means is this meant to be a self-contained refresher on probability but
 here are the two main facts we'll need (there are some assumptions here that I'm not stating ... I think so it's best to
 refer to a proper text book for clarity):
