@@ -25,4 +25,17 @@ use the symbol $$t$$ to denote time, or some discrete unit that delinates a "ste
 work within the bounds of time, so $$0 \lt k \lt t$$, and $$\sum_{k=1}^t$$ is a symbol stating that it will add everything 
 that comes after it from the discrete step of 1 until $$t$$. And formula is:
 
-$$\mu_t = {1\over{t}} \sum_{k=1}^t x_k$$
+$$\mu_t = {1\over{t}} \sum_{k=1}^t x_k \tag 1$$
+
+$$ = {1\over k} \left( x_k + \sum_{j=1}^{k-1}x_j \right) \tag 2$$
+$$= {1\over k} \left(x_k + (k-1)\mu_{k-1} \right) \tag 3$$
+$$ = \mu_{k-1} + {1\over k} \left(x_k - \mu_{k-1} \right) \tag 4$$
+
+
+thanks to the comments it's done by using the definition of $\mu_{k-1}$
+
+$$\mu_{k-1} = {1\over (k-1)}\sum_{j=1}^{k-1}x_j$$
+
+so indeed it is equal: 
+
+$$ \sum_{j=1}^{k-1}x_j =  (1-k)* {1\over (k-1)}\sum_{j=1}^{k-1}x_j$$
