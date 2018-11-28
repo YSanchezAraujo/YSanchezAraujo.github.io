@@ -3,9 +3,9 @@
 </script>
 
 A lot of the work I'm currently doing involves making use of recursive conditional probability formulas to compute beliefs
-about the posterior of quantity of interest. Here I'll try to clearly lay out how this works, first starting with a recursive
-program in Julia. It's a simple function that add's it's two inputs by recursively remvoing one unit from it's first argument
-and giving that unit to it's second argument, until a stop condition is met (first argument is equal to zero).
+about some posterior distribution. Here I'll try to clearly lay out how this works, first starting with a recursive
+program in Julia. It's a simple function that adds its two inputs by recursively remvoing one unit from its first argument
+and giving that unit to its second argument, until a stop condition is met (first argument is equal to zero).
 
 ```julia
 function add_two_numbers(x, y)
@@ -90,7 +90,7 @@ X_random = rand(1000);
 isapprox(regular_mean(X_random), recursive_mean(1, 0, X_random))
 ```
 
-**ASIDE** although I do think Julia is the suprior language for this type of work, given the larger user bases of other
+**ASIDE** although I do think Julia is the suprior language **for this type of work**, given the larger user bases of other
 languages here's a Python implementation
 
 ```python
