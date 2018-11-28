@@ -140,7 +140,7 @@ independent of the past, given the present". The idea of the Markov property is 
 To give an example of how this might look like in within our probability notation, say we have the expression: 
 $$P(x_t | x_{t-1}, x_{t-2})$$, if each of the $$x$$ states refer to a room in the example above, then by the Markov property:
 
-$$P(x_t | x_{t-1}, x_{t-2}) = P(x_t | x_{t-1})$$
+$$P(R_3 | R_2, R_1) = P(R_3 | R_2)$$
 
 With that in mind, we'll start to get into thinking recusively and probablistically about states. Our goal is to figure out,
 or have a best estimate of what state we are in, which means that this knowledge won't be given, we'll have to infer it
