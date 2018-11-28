@@ -57,3 +57,6 @@ $$= \mu_{t-1} + {1\over t} \left(x_t - \mu_{t-1} \right) \tag 5$$
 and so we have that we can recursively compute the mean through discrete intervals by: 
 
 $$\mu_t = {1\over{t}} \sum_{k=1}^t x_k = \mu_{t-1} + {1\over{t}} \left(x_t - \mu_{t-1} \right)$$
+
+given that I started with a Julia function, let's see how we can write $$(5)$$ as a function
+
