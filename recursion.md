@@ -4,7 +4,7 @@
 
 A lot of the work I'm currently doing involves making use of recursive conditional probability formulas to compute beliefs
 about some posterior distribution. Here I'll try to clearly lay out how this works, first starting with a recursive
-program in Julia. It's a simple function that adds its two inputs by recursively remvoing one unit from its first argument
+program in Julia. It's a simple function that adds its two inputs by recursively removing one unit from its first argument
 and giving that unit to its second argument, until a stop condition is met (first argument is equal to zero).
 
 ```julia
