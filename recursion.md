@@ -124,3 +124,5 @@ $$P(A | B, C) = P(A|B, C) \times P(B|C) \times P(C)$$
 **Bayes rule**
 
 $$P(A | B, C) = {   {P(B | A, C) \times P(A | C)} \over{P(B | C)} }$$
+
+To be clear, these are specific forms of the formulas which we get through algebraic manipulations. For example, the inversion of $$P(A|B, C)$$ can be written so that you have $$P(C|A)$$ instead of $$P(A|C)$$ in the numerator. 
