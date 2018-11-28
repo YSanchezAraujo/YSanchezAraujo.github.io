@@ -123,4 +123,4 @@ $$P(a | b, c) = P(a|b, c) \times P(b|c) \times P(c)$$
 
 **Bayes rule**
 
-$$P(a | b, c) = {{P(b |a, c)\times P(a|c)}\over{P(b, c)}}$$
+$$P(a | b, c) = {P(b |a, c) \times P(a|c)}\over{P(b | c)}}$$
