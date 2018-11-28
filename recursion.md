@@ -90,3 +90,25 @@ X_random = rand(1000);
 isapprox(regular_mean(X_random), recursive_mean(1, 0, X_random))
 ```
 
+**ASIDE** although I do think Julia is the suprior language for this type of work, given the larger user bases of other
+languages here's a Python implementation
+
+```python
+import numpy as np
+
+X = [2, 3, 1, 5]
+
+def recursive_mean(t, mu, data):
+    if t-1 == len(data):
+        return mu
+    else:
+        mu_k = mu + 1/t * (data[t-1] - mu)
+        return recursive_mean(t+1, mu_k, data)
+
+np.allclose(np.mean(X), recursive_mean(1, 0, X))
+
+X_random = np.random.random(1000)
+
+np.allclose(np.mean(X_random), recursive_mean(1, 0, X_random))
+
+```
