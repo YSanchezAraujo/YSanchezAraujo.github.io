@@ -83,7 +83,7 @@ end
 
 isapprox(regular_mean(X), recursive_mean(1, 0, X))
 
-# and to make sure I'm not doing some trickery with my definition of X
+# and to make sure I'm not doing some sort of trickery with my definition of X
 
 X_random = rand(1000);
 
@@ -129,5 +129,9 @@ To be clear, these are specific forms of the formulas which we get through algeb
 the inversion of $$P(A|B, C)$$ can be written so that you have $$P(C|A)$$ instead of $$P(A|C)$$ in the numerator. The next
 idea we'll make use of is called the Markov property. This property can be useful when thinking of "sequences of things"
 and for our purposes invoking the Markov property means that a "state" is "complete". To further expand on what this actually
-means imagine you're maze of rooms and each time you enter a room you go into a new state. We'll say that each room is one
-state. Now imagine that the rooms are on a linear track `R1 -> R2 -> R3 ... -> RN`
+means imagine you're in maze of rooms and each time you enter a room you go into a new state. We'll say that each room is one
+state. Now imagine that the rooms are on a linear track `R1 -> R2 -> R3 ... -> RN` and so you know that if you're in room 3
+then you could have only gotten there room 2 and when you were in room 2 you could have only gotten there from room 1. In
+which case, knowing that we are in room 3, or 4, or 10 give us all information for how we go there. This is what the idea
+of the Markov property says. If you Google it, or read a text book on it the authors may define it as: "the future is 
+independent of the past, given the present". The idea of the Markov property is what I mean when I say a state is complete.
