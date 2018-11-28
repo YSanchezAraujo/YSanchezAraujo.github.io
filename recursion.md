@@ -125,5 +125,9 @@ $$P(A | B, C) = P(A|B, C) \times P(B|C) \times P(C)$$
 
 $$P(A | B, C) = {   {P(B | A, C) \times P(A | C)} \over{P(B | C)} }$$
 
-To be clear, these are specific forms of the formulas which we get through algebraic manipulations. For example, t
-he inversion of $$P(A|B, C)$$ can be written so that you have $$P(C|A)$$ instead of $$P(A|C)$$ in the numerator. 
+To be clear, these are specific forms of the formulas which we get through algebraic manipulations. For example, 
+the inversion of $$P(A|B, C)$$ can be written so that you have $$P(C|A)$$ instead of $$P(A|C)$$ in the numerator. The next
+idea we'll make use of is called the Markov property. This property can be useful when thinking of "sequences of things"
+and for our purposes invoking the Markov property means that a "state" is "complete". To further expand on what this actually
+means imagine you're maze of rooms and each time you enter a room you go into a new state. We'll say that each room is one
+state. Now imagine that the rooms are on a linear track `R1 -> R2 -> R3 ... -> RN`
