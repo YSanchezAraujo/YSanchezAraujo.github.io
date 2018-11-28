@@ -58,5 +58,35 @@ and so we have that we can recursively compute the mean through discrete interva
 
 $$\mu_t = {1\over{t}} \sum_{k=1}^t x_k = \mu_{t-1} + {1\over{t}} \left(x_t - \mu_{t-1} \right)$$
 
-given that I started with a Julia function, let's see how we can write $$(5)$$ as a function
+given that I started with a Julia function, let's see how we can write $$(5)$$ as a function. For this we'll also have to 
+be explicit about thinking of the data.
+
+```julia
+X = [2, 3, 1, 5]
+
+function recursive_mean(t, mu, data)
+    if t-1 == length(data)
+        return mu
+     else
+         mu_k = mu + 1/t * (data[t] - mu)
+         return recursive_mean(t+1, mu_k, data)
+     end
+end
+
+# test it
+function regular_mean(data)
+    sum(data)/length(data)
+end
+
+# because of how arithmetic works in computers we have to use
+# the isapprox function to check for equality
+
+isapprox(regular_mean(X), recursive_mean(1, 0, X))
+
+# and to make sure I'm not doing some trickery with my definition of X
+
+X_random = rand(1000);
+
+isapprox(regular_mean(X_random), recursive_mean(1, 0, X_random))
+```
 
