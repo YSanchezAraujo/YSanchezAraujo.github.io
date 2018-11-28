@@ -12,3 +12,5 @@
 <h2>Ramblings</h2>
 
 [**Learning to deconstruct information**](https://ysanchezaraujo.github.io/violations_of_exp)
+
+[**Thinking recursively**](https://ysanchezaraujo.github.io/recursion)
