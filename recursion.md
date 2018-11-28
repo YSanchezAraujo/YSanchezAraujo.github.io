@@ -30,7 +30,15 @@ $$\mu_t = {1\over{t}} \sum_{k=1}^t x_k \tag 1$$
 the "correctness" of this first manipulation below comes from the principle of induction, if we have a mean over $$t$$ things: $${1\over{t}}\sum_{k=1}^t x_k$$ and we now want to compute a new mean at interval $$t+1$$, we can take the previous sum over
 those $$t$$ intervals (sum only, not the mean), then add our new item that we got at $$t+1$$ and divide by $$t+1$$
 
-$$ = {1\over t+1} \left( x_{t+1} + \sum_{k=1}^{t}x_k \right) \tag 2$$
+$$ {1\over t+1} \left( x_{t+1} + \sum_{k=1}^{t}x_k \right)$$
+
+take note that here I'm using the bounds $$t+1$$ and $$t$$, but this would take on the same meaning if I instead used $$t$$ and
+$$t-1$$. The rest of the derivation will make use of the latter bounds. Alright so given what we've declared above we can then
+use (1), and "take an element out" so to speak:
+
+
+$$ {1\over t} \left( x_{t} + \sum_{k=1}^{t-1}x_k \right) \tag 2$$
+
 $$= {1\over k} \left(x_k + (k-1)\mu_{k-1} \right) \tag 3$$
 $$ = \mu_{k-1} + {1\over k} \left(x_k - \mu_{k-1} \right) \tag 4$$
 
