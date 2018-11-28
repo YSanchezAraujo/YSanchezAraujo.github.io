@@ -135,3 +135,11 @@ then you could have only gotten there room 2 and when you were in room 2 you cou
 which case, knowing that we are in room 3, or 4, or 10 give us all information for how we go there. This is what the idea
 of the Markov property says. If you Google it, or read a text book on it the authors may define it as: "the future is 
 independent of the past, given the present". The idea of the Markov property is what I mean when I say a state is complete.
+
+With that in mind, we'll start to get into thinking recusively and probablistically about states. Our goal is to figure out,
+or have a best estimate of what state we are in, which means that this knowledge won't be given, we'll have to infer it
+based on all the other peices of information we have. First we have to further define some notation, all $$x$$ are states and 
+when refering to a sequence of them we'll write $$x_{j:k}$$. $$y$$ denotes observations and like states we can refer to 
+sequences of them: $$y_{j:k}$$. $$a$$ will denote an action that is taken and again we can have a sequence of them:
+$$a_{j:k}$$
+
