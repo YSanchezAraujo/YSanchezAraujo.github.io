@@ -50,7 +50,7 @@ using this we can write the that $$(2)$$ is equal to:
 
 $$  = {1\over t} \left(x_t + (t-1)\mu_{t-1} \right) \tag 4$$
 
-then we distribute, rearrange, and factor out a $$t$$ to get that $$(4)$$ is equal to:
+then we distribute, rearrange, and factor out a $$t^{-1}$$ to get that $$(4)$$ is equal to:
 
 $$= \mu_{t-1} + {1\over t} \left(x_t - \mu_{t-1} \right) \tag 5$$
 
