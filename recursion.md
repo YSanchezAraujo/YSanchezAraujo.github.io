@@ -22,4 +22,7 @@ case where recursion is a new concept, seeing it "explicitly" written down in a 
 a hole. OK, so another example closer to what we'll want to deal with, though still void of any probability formula
 manipulations. It's the example of computing a sample mean recursively. First, let's get some notation out of the way, we'll
 use the symbol $$t$$ to denote time, or some discrete unit that delinates a "step". We'll use $$k$$ as an index to 
-working within the bounds of time, so $$0 \lt k \lt t$$
+work within the bounds of time, so $$0 \lt k \lt t$$, and $$\sum_{k=1}^t$$ is a symbol stating that it will add everything 
+that comes after it from the discrete step of 1 until $$t$$. And formula is:
+
+$$\mu_t = {1\over{t}} \sum_{k=1}^t x_k$$
