@@ -212,9 +212,9 @@ def particle_filter(data, np, tf, lik):
 
     for time in range(n_time_steps):
         # predict new particles based on the initial values
-        particles_time_t = transition_function(particles_time_t)
+        particles_time_t = tf(particles_time_t)
         # calculate the likelihoods
-        weights_time_t = likelihood_function(particles_time_t, observations[time])
+        weights_time_t = lik(particles_time_t, observations[time])
         # normalize weights
         weights_time_t /= sum(weights_time_t)
         # multinomial resample accoring to the weights
