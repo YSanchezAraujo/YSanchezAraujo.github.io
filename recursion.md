@@ -188,7 +188,8 @@ $$P(x_t) \propto P(y_t|x_t) \times \hat P(x_t) \tag{11}$$
 The last two equations $$(10), (11)$$ provide the required definitions to define a wide range of filtering methods, and they
 respectively correspond to the two major "steps" in a Bayesian filter algorithm, the prediction and update steps. Looking
 at the equations you can see that $$(10)$$ is a prediction because it doesn't take into account the most recent observation.
-Then $$(11)$$ is an update because it revises the prediction by taking into account the most recent observation. Algorithms
-such as the Kalman filter and the Bootstrap filter both make use of these definitions. 
+Then $$(11)$$ is an update because it revises the prediction by taking into account the most recent observation. Additionally, 
+the term $$P(x_t | x_{t-1}, a_t)$$ is typically refered to as a transition function and $$P(y_t|x_t)$$ is typically known as
+a likelihood function. Algorithms such as the Kalman filter and the Bootstrap filter both make use of these definitions. 
 
 
