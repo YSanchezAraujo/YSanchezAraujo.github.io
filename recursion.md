@@ -192,3 +192,44 @@ Then $$(11)$$ is an update because it revises the prediction by taking into acco
 the term $$P(x_t | x_{t-1}, a_t)$$ is typically refered to as a transition function and $$P(y_t|x_t)$$ is typically known as
 a likelihood function. Algorithms such as the Kalman filter and the Bootstrap filter both make use of $$(10)$$ and $$(11)$$.
 
+As a final example, I'll write down the most generic particle filter algorithm in python:
+
+```python
+import numpy as np
+import scipy.stats
+
+def particle_filter(data, np, tf, lik):
+    """data::array : of data points,
+    np::int : number of particles,
+    tf::function : transition function (for the prediction step)
+    lik::function: likelihood function (for the update step)
+    """
+    n_time_steps = len(data)
+    # intialized value placeholders below
+    weights_time_t = np.random.random(np)
+    particles_time_t = np.random.random(np)
+    particle_means = np.zeros(n_time_steps) # for storage 
+
+    for time in range(n_time_steps):
+        # predict new particles based on the initial values
+        particles_time_t = transition_function(particles_time_t)
+        # calculate the likelihoods
+        weights_time_t = likelihood_function(particles_time_t, observations[time])
+        # normalize weights
+        weights_time_t /= sum(weights_time_t)
+        # multinomial resample accoring to the weights
+        particles_time_t = np.random.choice(particles_time_t, n_particles, p=weights_time_t)
+        particle_means[time] = particles_time_t.mean()
+    
+    return particle_means
+```
+
+and here are examples of what an arbitrary transition and likelihood function might look like:
+
+```python
+def transition_function(x_time_minus_1):
+    return [np.random.normal(i, 1) for i in x_time_minus_1]
+
+def likelihood_function(x_predicted, y):
+    return [scipy.stats.norm.pdf(x=i, loc=y, scale=1) for i in x_predicted]
+```
