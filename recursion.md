@@ -154,11 +154,12 @@ $$y_{1:t}$$ and $$a_{1:t}$$, there for we can write:
 
 $$P(x_t | y_{1:t}, a_{1:t})$$
 
-now we can use Bayes rule to reason about seeing $$y_{t}$$, if the state was $$x_t$$ and our history: 
+now we can use Bayes rule to reason about seeing $$y_{t}$$, if the state was $$x_t$$ and considering the history of 
+information: 
 
 $$P(x_t | y_{1:t}, a_{1:t}) \propto { P(y_t | x_t, y_{1:t-1}, a_{1:t}) \times P(x_t | y_{1:t-1}, a_{1:t}) } \tag 6$$
 
-the the symbol $$\propto$$ says it's proportional instead of equal to. This is because there's a term in the denominator, 
+the symbol $$\propto$$ says it's proportional instead of equal to. This is because there's a term in the denominator, 
 the normalizing constant $$P(y_t | y_{1:t-1}, a_{1:t})$$ that I've ommitted. To move forward we need to introduce two
 new identities:
 
@@ -200,13 +201,13 @@ can indeed be implemented as a recursive call to itself:
 import numpy as np
 import scipy.stats
 
-def particle_filter(data, np, tf, lik):
-    """data::array : of data points,
+def particle_filter(observations, np, tf, lik):
+    """observations::array : of data points,
     np::int : number of particles,
     tf::function : transition function (for the prediction step)
     lik::function: likelihood function (for the update step)
     """
-    n_time_steps = len(data)
+    n_time_steps = len(observations)
     # intialized value placeholders below
     weights_time_t = np.random.random(np)
     particles_time_t = np.random.random(np)
