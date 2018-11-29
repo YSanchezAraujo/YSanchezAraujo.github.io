@@ -237,8 +237,11 @@ def likelihood_function(x_predicted, y):
     return [scipy.stats.norm.pdf(x=i, loc=y, scale=1) for i in x_predicted]
 ```
 
-in practice, even for toy examples a serious implementation of a particle filter may be more involved and would take into 
-account things like effective sample size, making sure that the machine precision is added to the likelihood calculations, 
-or a smarter resampling scheme such as systematic resampling. Doing all of these things would call for some changes to the 
-implementation, for example a re-definition of the expectation calculation (this is the `particle_mean[time]` line), 
-because the weights computed would then be conditional on whether resampling was performed or not. 
+for this particle filter, the line `particles_time_t = tf(particles_time_t)` is the prediction step, and combined the
+lines that calculate the weights, normalize them, and then resample the particles according to the weights constitute
+the update step. In practice, even for toy examples a serious implementation of a particle filter may be more involved 
+and would take into account things like effective sample size, making sure that the machine precision is added to the 
+likelihood calculations, or a smarter resampling scheme such as systematic resampling. Doing all of these things would 
+call for some changes to the implementation, for example a re-definition of the expectation calculation (this is the 
+`particle_mean[time]` line), because the weights computed would then be conditional on whether resampling was performed 
+or not. 
