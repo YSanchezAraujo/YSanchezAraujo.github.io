@@ -1,7 +1,7 @@
 
 <h2>Resources</h2>
 
-[**Books and papers**](https://ysanchezaraujo.github.io/best_books_ever)
+[**Books and papers**](https://ysanchezaraujo.github.io/resources)
 
 <h2>Tutorials</h2>
 
