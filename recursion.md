@@ -192,7 +192,9 @@ Then $$(11)$$ is an update because it revises the prediction by taking into acco
 the term $$P(x_t | x_{t-1}, a_t)$$ is typically refered to as a transition function and $$P(y_t|x_t)$$ is typically known as
 a likelihood function. Algorithms such as the Kalman filter and the Bootstrap filter both make use of $$(10)$$ and $$(11)$$.
 
-As a final example, I'll write down the most generic particle filter algorithm in python:
+As a final example, I'll write down the most generic particle filter algorithm in python. Unlike the other examples I've
+replaced recursion with a for-loop, to show that you don't actually need to implement a recursive function. However, this
+can indeed be implemented as a recursive call to itself:
 
 ```python
 import numpy as np
