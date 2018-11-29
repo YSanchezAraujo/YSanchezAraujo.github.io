@@ -29,7 +29,7 @@ that comes after it from the discrete step of 1 until $$t$$. And formula is:
 $$\mu_t = {1\over{t}} \sum_{k=1}^t x_k \tag 1$$
 
 the "correctness" of this first manipulation below comes from the principle of induction, if we have a mean over $$t$$ things: $${1\over{t}}\sum_{k=1}^t x_k$$ and we now want to compute a new mean at interval $$t+1$$, we can take the previous sum over
-those $$t$$ intervals (sum only, not the mean), then add our new item that we got at $$t+1$$ and divide by $$t+1$$
+those $$t$$ intervals, then add our new item that we got at $$t+1$$ and divide by $$t+1$$
 
 $$ {1\over t+1} \left( x_{t+1} + \sum_{k=1}^{t}x_k \right)$$
 
@@ -47,7 +47,7 @@ the next step is to use $$(1)$$ and manipulate the index:
 
 $$\mu_{t-1} = {1\over (t-1)}\sum_{k=1}^{t-1}x_k \tag 3$$
 
-using this we can write the that $$(2)$$ is equal to: 
+using this we can write that $$(2)$$ is equal to: 
 
 $$  = {1\over t} \left(x_t + (t-1)\mu_{t-1} \right) \tag 4$$
 
