@@ -167,9 +167,10 @@ $$P(x_t | x_{0:t-1}, y_{1:t-1}, a_{1:t}) = P(x_t | x_{t-1}, a_t) \tag 7$$
 
 $$P(y_t | x_{0:t}, y_{1:t-1}, a_{1:t}) = P(y_t | x_t) \tag 8$$
 
-using $$(8)$$ we can see that the first term in $$(6)$$ is reduced to $$P(y_t|x_t)$$. Now we take a look at the second term
-in $$(6)$$. We now need to bring in the idea of recursion and reason about what the current state $$x_t$$ might be in terms 
-of our past beliefs. We can rewrite the second term in $$(6)$$ as:
+using $$(8)$$ we can see that the first term of the right hand side of the $$\propto$$ in $$(6)$$ is reduced to
+$$P(y_t|x_t)$$. Now we take a look at the second term in $$(6)$$. We now need to bring in the idea of recursion and 
+reason about what the current state $$x_t$$ might be in terms of our past beliefs. We can rewrite the second term 
+in $$(6)$$ as:
 
 $$\int P(x_t | x_{t-1}, y_{1:t-1}, a_{1:t}) \times P(x_{t-1}|, y_{1:t-1}, a_{1:t-1})dx_{t-1} \tag 9$$
 
