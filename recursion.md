@@ -218,7 +218,7 @@ def particle_filter(data, np, tf, lik):
         # normalize weights
         weights_time_t /= sum(weights_time_t)
         # multinomial resample accoring to the weights
-        particles_time_t = np.random.choice(particles_time_t, n_particles, p=weights_time_t)
+        particles_time_t = np.random.choice(particles_time_t, np, p=weights_time_t)
         particle_means[time] = particles_time_t.mean()
     
     return particle_means
