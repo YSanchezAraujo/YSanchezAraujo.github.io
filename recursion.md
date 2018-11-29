@@ -238,6 +238,6 @@ def likelihood_function(x_predicted, y):
 
 in practice, even for toy examples a serious implementation of a particle filter may be more involved and would take into 
 account things like effective sample size, making sure that the machine precision is added to the likelihood calculations, 
-or a smarter resampling scheme such as systematic resampling. Doing all of these things would for some changes to the 
+or a smarter resampling scheme such as systematic resampling. Doing all of these things would call for some changes to the 
 implementation, for example a re-definition of the expectation calculation (this is the `particle_mean[time]` line), 
 because the weights computed would then be conditional on whether resampling was performed or not. 
