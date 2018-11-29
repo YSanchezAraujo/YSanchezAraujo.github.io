@@ -183,9 +183,10 @@ this now allows us to change $$(6)$$ to become:
 
 $$P(x_t) \propto P(y_t|x_t) \times \hat P(x_t) \tag 11$$
 
-<h1>General Bayesian filter</h1>
+<h3>General Bayesian filter</h3>
 
 The last two equations $$(10), (11)$$ provide the required definitions to define a wide range of filtering methods, and they
-respectively correspond to the two major "steps" in a Bayesian filter algorithm, the prediction and update steps.
+respectively correspond to the two major "steps" in a Bayesian filter algorithm, the prediction and update steps. Algorithms
+such as the Kalman filter and the Bootstrap filter both make use of these definitions. 
 
-$$\begin{algorithm}$$
+
