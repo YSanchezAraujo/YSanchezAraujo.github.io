@@ -1,2 +1,5 @@
 theme: jekyll-theme-cayman
 markdown: kramdown
+
+# Google Analytics
+google_analytics: UA-130679094-1
