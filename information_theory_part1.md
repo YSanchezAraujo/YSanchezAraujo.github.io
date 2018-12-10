@@ -1,3 +1,7 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
 <h1>Entropy is not entropy, it's entropy</h1>
 
 Both in physics and information theory there is a term called entropy that refer to two different things. Sometimes
