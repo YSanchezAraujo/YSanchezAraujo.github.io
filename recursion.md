@@ -149,6 +149,11 @@ when refering to a sequence of them we'll write $$x_{j:k}$$. $$y$$ denotes obser
 sequences of them: $$y_{j:k}$$. $$a$$ will denote an action that is taken and again we can have a sequence of them:
 $$a_{j:k}$$
 
+One last thing to define, the notation $$y_{j:k}$$ is a compressed (in the visual sense) version of 
+$$(y_1, y_2, y_3, ... y_k)$$, so for example when $$P(y_{1:t})$$ is referred to, that is equivlant to referring to 
+$$P(y_1, y_2, ..., y_t)$$. Under certain assumptions, this allows us to factor the last term I used as, for example: 
+$$P(y_t)\times P(y_1, y_2, ... y_{t-1}) = P(y_t) \times P(y_{1:t-1})$$.
+
 Now at time $$t$$ we would like to know $$P(x_t)$$, and the information that we know is true up until this point consists of
 $$y_{1:t}$$ and $$a_{1:t}$$, there for we can write:
 
