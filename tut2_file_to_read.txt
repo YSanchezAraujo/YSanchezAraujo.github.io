@@ -1,4 +1,0 @@
-This is the file that we are reading. Hopefully, all works out
-fine. What else should I write here? How about, will I ever follow through
-on what I'm doing here. Or will it all turn out to be for nothing. OK, let's
-hope it is not the latter.
