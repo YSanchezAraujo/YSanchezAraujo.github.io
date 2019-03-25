@@ -1,4 +1,6 @@
 ```python
+import numpy as np
+
 def hmm(nt):
     latent_vars = np.zeros(nt)
     obs_vars = np.zeros(nt)
