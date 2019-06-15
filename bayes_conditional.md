@@ -78,4 +78,4 @@ what is this? Hopefully it makes sense that the distribution of $$y$$ is a Berno
 
 Cool, now to use Bayes rule , we'll do the algebra and arrive at:
 
-$$P(J | Y, \psi) = frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) P(\psi)}$$
+$$P(J | Y, \psi) = \frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) P(\psi)}$$
