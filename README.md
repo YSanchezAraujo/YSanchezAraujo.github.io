@@ -12,3 +12,5 @@
 [**Learning to deconstruct information**](https://ysanchezaraujo.github.io/violations_of_exp)
 
 [**Thinking recursively**](https://ysanchezaraujo.github.io/recursion)
+
+[**Simple Bayes stuff**](https://ysanchezaraujo.github.io/bayes_conditional)
