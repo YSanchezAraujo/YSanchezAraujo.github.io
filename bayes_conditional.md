@@ -76,6 +76,10 @@ $$P(Y=1|J, \psi)$$
 what is this? Hopefully it makes sense that the distribution of $$y$$ is a Bernoulli distribution. Also we see that it doesn't really make sense to say: "what is the probability of $$Y=1$$, some Bernoulli distributed random variable and this constant $$\psi$$?" rather, it's **given that** $$J$$ is Bernoulli distributed with probability $$\psi$$, what is the probability that $$Y=1$$
 
 
-Cool, now to use Bayes rule , we'll do the algebra and arrive at:
+Cool, now to use Bayes rule, and ask the question what is the probability that the outcome of $$J$$ was 1?:
 
-$$P(J | Y, \psi) = \frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) P(\psi)}$$
+$$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) P(\psi)}$$
+
+to break this down peice by peice, $$P(\psi)$$ we know is a constant, and it's value is 0.5, the distribution of $$J$$ is Bernoulli with probability $$\psi=0.5$$, and the distribution of $$Y$$ is also Bernoulli with probability (of the outcome equaling 1) 0.5. So the above turns into:
+
+$$\frac{0.5^3}{0.5^3 + 0.5^3} = 0.5$$
