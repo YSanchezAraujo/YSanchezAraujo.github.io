@@ -43,4 +43,6 @@ $$P(A|B)$$
 
 The answer here is the same exact way that you would think about $$P(X)$$. To make this clear I want to rewrite that function like so:
 
-$$P(A|B) = P_{B}(A)$$
+$$P(A|B) = P_{B}(A)$$ 
+
+in words, the conditional probability of $$A \| B$$ is not to be read as: here I have my probility function $$P()$$ and I'm going to give it as input $$A given B$$, NO. Instead you read it as: I have a probability function over $$A$$, I've incorportated some information, here $$B$$, and that has changed the result of my probability function, but it is still only a probability function over the random variable $$A$$. 
