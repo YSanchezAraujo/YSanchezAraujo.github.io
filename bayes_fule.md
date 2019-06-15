@@ -43,4 +43,4 @@ $$P(A|B)$$
 
 The answer here is the same exact way that you would think about $$P(X)$$. To make this clear I want to rewrite that function like so:
 
-$$P(A|B) = P(A)_{B}$$
+$$P(A|B) = P_{B}(A)$$
