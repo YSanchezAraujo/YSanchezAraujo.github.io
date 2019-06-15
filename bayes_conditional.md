@@ -67,3 +67,5 @@ empirical_dist = [gen_process(0.5) for i in 1:10000];
 plt.hist(empirical_dist)
 ```
 
+![dist](empdirst.png)
+
