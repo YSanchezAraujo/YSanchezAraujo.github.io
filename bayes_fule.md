@@ -29,4 +29,4 @@ and for any of the above:
 
 $$P(B) = \int P(B|A)P(A) \mathop{dA}$$
 
-the same holds the other way around to get the marginal $$P(A)$$. 
+the same holds the other way around to get the marginal $$P(A)$$. So, to beat a dead horse, we see that if we have the joint probability over two random variables (really over $$N$$ random variables, but we'll stick with 2 for now), we can factor this in two ways, by applying the chain rule. Then we can equate those two different ways to one another and divide by one of the marginals to get the result we'd have if we were to apply Bayes rule to the conditional that is left over. 
