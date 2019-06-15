@@ -74,3 +74,8 @@ That seems to be as expected. If we want to write down some statements about thi
 $$P(Y=1|J, \psi)$$
 
 what is this? Hopefully it makes sense that the distribution of $$y$$ is a Bernoulli distribution. Also we see that it doesn't really make sense to say: "what is the probability of $$Y=1$$, some Bernoulli distributed random variable and this constant $$\psi$$?" rather, it's **given that** $$J$$ is Bernoulli distributed with probability $$\psi$$, what is the probability that $$Y=1$$
+
+
+Cool, now to use Bayes rule , we'll do the algebra and arrive at:
+
+$$P(J | Y, \psi) = frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) P(\psi)}$$
