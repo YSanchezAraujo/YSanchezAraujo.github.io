@@ -69,4 +69,8 @@ plt.hist(empirical_dist)
 
 ![dist](empdirst.png)
 
-That seems to be as expected. If we want to write down some statements about this process say: $$P(Y=1|J, \psi)$$, what is this? Hopefully it makes sense that the distribution of $$y$$ is a Bernoulli distribution. Also we see that it doesn't really make sense to say: "what is the probability of $$Y=1$$, some Bernoulli distributed random variable and this constant $$\psi$$?" rather, it's **given that** $$J$$ is Bernoulli distributed with probability $$\psi$$, what is the probability that $$Y=1$$
+That seems to be as expected. If we want to write down some statements about this process say: 
+
+$$P(Y=1|J, \psi)$$
+
+what is this? Hopefully it makes sense that the distribution of $$y$$ is a Bernoulli distribution. Also we see that it doesn't really make sense to say: "what is the probability of $$Y=1$$, some Bernoulli distributed random variable and this constant $$\psi$$?" rather, it's **given that** $$J$$ is Bernoulli distributed with probability $$\psi$$, what is the probability that $$Y=1$$
