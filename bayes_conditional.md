@@ -52,3 +52,18 @@ $$\psi=0.5$$
 $$J \sim Bernoulli(\psi)$$
 
 $$y = J + 1$$
+
+to make it concrete let's write a program and plot what the distribution of $$y$$ looks like:
+
+```julia
+using Distributions
+using PyPlot
+
+function gen_process(psi)
+    1 + Int64(rand(Bernoulli(psi)))
+end
+
+empirical_dist = [gen_process(0.5) for i in 1:10000];
+plt.hist(empirical_dist)
+```
+
