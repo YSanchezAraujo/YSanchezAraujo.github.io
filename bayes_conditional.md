@@ -83,3 +83,5 @@ $$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits
 to break this down peice by peice, $$P(\psi)$$ we know is a constant, and it's value is 0.5, the distribution of $$J$$ is Bernoulli with probability $$\psi=0.5$$, and the distribution of $$Y$$ is also Bernoulli with probability (of the outcome equaling 1) 0.5. So the above turns into:
 
 $$\frac{0.5^3}{0.5^3 + 0.5^3} = 0.5$$
+
+This is actually not entirelly correct. $$P(\psi)$$ doesn't really make sense because $$\psi$$ is not a random variable, but instead a constant. The math simply works out because $$\psi=0.05$$. We should instead think of $$\psi$$ as a mixing coeffiecient (1-$$\psi$$ = \psi). 
