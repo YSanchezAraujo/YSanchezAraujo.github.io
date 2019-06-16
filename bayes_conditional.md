@@ -86,4 +86,6 @@ $$\frac{0.5^3}{0.5^3 + 0.5^3} = 0.5$$
 
 This is actually not entirelly correct. $$P(\psi)$$ doesn't really make sense because $$\psi$$ is not a random variable, but instead a constant. The math simply works out because $$\psi=0.05$$. We should instead think of $$\psi$$ as a mixing coeffiecient (1-$$\psi$$ = $$\psi$$). Doing that we can then rewrite this as:
 
-$$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi) \psi_k}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) \psi_j)}$$
+$$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi) \psi_k}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) \psi_j}$$
+
+with the conditions that $$\sum_k \psi_k = 1$$ and that $$\psi_k >= 0$$ for all $$\psi_k$$
