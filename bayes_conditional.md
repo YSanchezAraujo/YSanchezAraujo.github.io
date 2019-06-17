@@ -78,14 +78,8 @@ what is this? Hopefully it makes sense that the distribution of $$y$$ is a Berno
 
 Cool, now to use Bayes rule, and ask the question what is the probability that the outcome of $$J$$ was 1?:
 
-$$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi) P(\psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) P(\psi)}$$
+$$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi)}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi)}$$
 
-to break this down peice by peice, $$P(\psi)$$ we know is a constant, and it's value is 0.5, the distribution of $$J$$ is Bernoulli with probability $$\psi=0.5$$, and the distribution of $$Y$$ is also Bernoulli with probability (of the outcome equaling 1) 0.5. So the above turns into:
+to break this down peice by peice, the distribution of $$J$$ is Bernoulli with probability $$\psi=0.5$$, and the distribution of $$Y$$ is also Bernoulli with probability (of the outcome equaling 1) 0.5. So the above turns into:
 
-$$\frac{0.5^3}{0.5^3 + 0.5^3} = 0.5$$
-
-This is actually not entirelly correct. $$P(\psi)$$ doesn't really make sense because $$\psi$$ is not a random variable, but instead a constant. The math simply works out because $$\psi=0.05$$. We should instead think of $$\psi$$ as a mixing coeffiecient (1-$$\psi$$ = $$\psi$$). Doing that we can then rewrite this as:
-
-$$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi) \psi_k}{\sum\limits_{j \in J}P(Y | J, \psi) P(J | \psi) \psi_j}$$
-
-with the conditions that $$\sum_k \psi_k = 1$$ and that $$\psi_k >= 0$$ for all $$\psi_k$$
+$$\frac{0.5^2}{0.5^2 + 0.5^2} = 0.5$$
