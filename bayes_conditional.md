@@ -84,4 +84,4 @@ to break this down peice by peice, the distribution of $$J$$ is Bernoulli with p
 
 $$\frac{0.5^2}{0.5^2 + 0.5^2} = 0.5$$
 
-**will complete this shorty, with the actual math that is going on above, instead of just saying X is a Y distributed**
+**will complete this shortly, with the actual math that is going on above, instead of just saying X is a Y distributed**
