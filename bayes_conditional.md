@@ -83,3 +83,5 @@ $$P(J=1 | Y=2, \psi=0.5) = \frac{P(Y | J, \psi) P(J | \psi)}{\sum\limits_{j \in 
 to break this down peice by peice, the distribution of $$J$$ is Bernoulli with probability $$\psi=0.5$$, and the distribution of $$Y$$ is also Bernoulli with probability (of the outcome equaling 1) 0.5. So the above turns into:
 
 $$\frac{0.5^2}{0.5^2 + 0.5^2} = 0.5$$
+
+**will complete this shorty, with the actual math that is going on above, instead of just saying X is a Y distributed**
