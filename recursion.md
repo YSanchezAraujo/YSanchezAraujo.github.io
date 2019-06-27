@@ -179,9 +179,8 @@ in $$(6)$$ as:
 
 $$\int P(x_t | x_{t-1}, y_{1:t-1}, a_{1:t}) \times P(x_{t-1}|, y_{1:t-1}, a_{1:t-1})dx_{t-1} \tag 9$$
 
-there are two things to notice here, the second term of $$(9)$$ is the $$t-1$$ version of expression
-$$(6)$$, and our intergral and $$dx_{t-1}$$ notation is telling us we've done this recursively, all the way from the start at
-$$t=1$$. Again we can see from one of the identities introduced, $$(7)$$, that the first term of $$(9)$$ is reduced to
+notice here, the second term of $$(9)$$ is the $$t-1$$ version of expression
+$$(6)$$. Again we can see from one of the identities introduced, $$(7)$$, that the first term of $$(9)$$ is reduced to
 $$P(x_t | x_{t-1}, a_t)$$. Putting these facts together $$(9)$$ becomes:
 
 $$\hat P(x_t) = \int P(x_t | x_{t-1}, a_t) \times P(x_{t-1}) dx_{t-1} \tag{10}$$
