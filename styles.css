@@ -4,6 +4,7 @@ body {
     font-family: 'PT Mono', serif;
     font-size: 15px;
     background-color: #f5efed;
+    padding: 200px;
 }
 
 img {
@@ -45,4 +46,12 @@ img {
 
 .header-right {
   float: right;
+}
+
+@media all and (max-width: 640px){
+    #site > .wrapper, #footer > .wrapper {
+        margin: 0;
+        padding: 40px;
+        width: auto;
+    }
 }
