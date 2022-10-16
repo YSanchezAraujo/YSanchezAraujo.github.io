@@ -1,8 +1,8 @@
 ---
-title: Welcome to my website
-feature_image: "https://picsum.photos/1300/400?image=989"
+title: Yoel Sanchez Araujo
+feature_image: ""
 feature_text: |
   ## Hello world
 ---
 
-There isn't much going on here yet, but watch this space
+There isn't much going on here yet
