@@ -3,9 +3,8 @@
 body {
     margin: 0 auto;
     font-family: 'Nunito', san-serif;
-    font-size: 18px;
-    color: #ffecd1;
-    background-color: #001524;
+    font-size: 17px;
+    background-color: #f5efed;
     padding: 2em 2em 3.5em;
     max-width: 1000px;
 }
@@ -23,17 +22,17 @@ img {
 
 .header a {
   float: left;
-  color: #001524;
+  color: black;
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 20px; 
+  font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
 }
 
 .header a.logo {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -43,7 +42,7 @@ img {
 }
 
 .header a.active {
-  background-color: #78290f;
+  background-color: dodgerblue;
   color: white;
 }
 
@@ -62,4 +61,3 @@ img {
 #unfloated-container{
     width: 1000px;
 }
-
