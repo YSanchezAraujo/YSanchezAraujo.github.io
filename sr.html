@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The SR - YSA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+  <link rel="stylesheet" href="styles.css"> <!-- Adjust path if using folders -->
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <!-- Load MathJax -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="index.html" class="logo">About me</a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="https://github.com/YSanchezAraujo">Github</a>
+      <a href="writing.html">Writing</a>
+      <a href="https://twitter.com/ysanchezaraujo">Twitter</a>
+    </div>
+  </div>
+
+  <div class="unfloated-container">
+    <h1>Random things on the Successor Representation (SR)</h1>
+    <p>
+      Within reinforcement learning, in 1993 (I think?) <a href="https://www.mpg.de/12309370/biological-cybernetics-dayan">Peter Dayan</a> created? invented? the <a href="http://www.gatsby.ucl.ac.uk/~dayan/papers/d93b.pdf">successor representation</a>, or the SR for short. Lots of articles and summaries have been written about the SR, so my goal here 
+      isn't exactly to introduce it. I'll instead lay out some details that I've had to write out myself to get a better understanding of the thing.
+    </p>
+    <p>
+      First let's lay out a reference point from which we can make sense of the SR. This reference point is the Bellman equation 
+      under a particular policy $\pi$, taken directly from Sutton & Barto chapter 3, equation 3.14
+
+      \[
+          v_{\pi}(s) = \sum_a \pi(a | s) \sum_{s', r} p(s', r | s, a)\Big[r + \gamma v_{\pi}(s') \Big] \; \; \; \; (1)
+      \]
+    </p>
+
+    <p>
+     we'll re-express this equation to make future comparisons a bit clearer: 
+     \[
+         v_{\pi}(s) = \sum_a \pi(a | s) \Big[r(s, a) + \gamma \sum_{s'}p(s' | s, a) v_{\pi}(s') \Big] \; \; \; \; (2)
+     \]
+
+     the term $r(s, a) = \mathbb{E}\big[R_{t+1} | S_{t} = s, A_{t} = a \big] = \sum_r r \sum_{s'} p(s', r | s, a)$, so you can see
+     if you multiply the transition probabilities in equation (1) you get $r(s, a)$. What I want to do now is put this into a form where 
+     we are primarily dealing with vectors and matrices. To do that I'll define two new expressions
+
+     \[
+     r_{\pi}(s) = \sum_a \pi(a | s)r(s, a) \; \; \; \; (3)
+     \]
+
+     \[
+     P_{\pi}(s, s') = \sum_a \pi(a | s)p(s' | s, a) \; \; \; \; (4)
+     \]
+
+    with these, we can write down a form of the Bellman equation under a particular policy $\pi$ that obeys the linear properties of matrix algebra:
+
+    \[
+    \boldsymbol{v}_{\pi} = \boldsymbol{r}_{\pi} + \gamma P_{\pi} \boldsymbol{v}_{\pi} \; \; \; \; (6)
+    \]
+
+    and just so that we are clear, the two vectors represent: $\boldsymbol{v}_{\pi} = \Big[ v_{\pi}(s_1) \; \; v_{\pi}(s_2) \; \; . . . \; \; v_{\pi}(s_{|S|})]^{\top} $
+    </p>
+    \[
+    \boldsymbol{r}_{\pi} = \begin{bmatrix}
+    \sum_a \pi(a | s_1) r(s_1, a) \\
+    \sum_a \pi(a | s_2) r(s_2, a) \\
+    \vdots \\
+    \sum_a \pi(a | s_{|S|}) r(s_{|S|}, a)
+              \end{bmatrix}
+    \]
+    and the matrix $P_{\pi}$ is: 
+    \[
+    P_{\pi} = \begin{bmatrix}
+    \sum\limits_a \pi(a \mid s_1) p(s_1 \mid s_1, a) & \sum\limits_a \pi(a \mid s_1) p(s_2 \mid s_1, a) & \cdots & \sum\limits_a \pi(a \mid s_1) p(s_{|S|} \mid s_1, a) \\
+    \sum\limits_a \pi(a \mid s_2) p(s_1 \mid s_2, a) & \sum\limits_a \pi(a \mid s_2) p(s_2 \mid s_2, a) & \cdots & \sum\limits_a \pi(a \mid s_2) p(s_{|S|} \mid s_2, a) \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \sum\limits_a \pi(a \mid s_{|S|}) p(s_1 \mid s_{|S|}, a) & \sum\limits_a \pi(a \mid s_{|S|}) p(s_2 \mid s_{|S|}, a) & \cdots & \sum\limits_a \pi(a \mid s_{|S|}) p(s_{|S|} \mid s_{|S|}, a)
+    \end{bmatrix}
+    \]
+  </div>
+
+  hopefully that spells out each element of equation (6). Now if $\gamma$ is set to some known number between zero and 1 then:
+
+  \[
+  \boldsymbol{v}_{\pi} = \boldsymbol{r}_{\pi} + \gamma P_{\pi} \boldsymbol{v}_{\pi}
+  \]
+  \[
+  \implies \big(I - \gamma P_{\pi} \big) \boldsymbol{v}_{\pi} = \boldsymbol{r}_{\pi}
+  \]
+  \[
+  \implies \boldsymbol{v}_{\pi} =  \big(I - \gamma P_{\pi} \big)^{-1}\boldsymbol{r}_{\pi} \; \; \; \; (7)
+  \]
+
+  the inverted term in equation (7) happens to be the successor representation, which I will denote as $M_{\pi} =  \big(I - \gamma P_{\pi} \big)^{-1}$. 
+  What we've written above is typically not how the SR is introduced. Instead you see some variant of:
+
+  \[
+  M_{\pi} = \sum_{t=0}^{\infty} (\gamma P_{\pi})^t = I + \gamma P_{\pi} + \gamma^2 P_{\pi}^2 + \cdots  \; \; \; \; (8)
+  \]
+
+  which is equal to the inverted term in (7) by some identity in some mathematical series. Another way that the SR is defined is through the use of 
+  indicator functions:
+
+  \[
+  M_{\pi}(s, s') = \mathbb{E}_{\pi} \Bigg[\sum_{t=0}^{\infty} \gamma^t \mathbb{I}\big[ S_{j + t} = s'\big] | S_j = s \Bigg]  \; \; \; \; (9)
+  \]
+
+  here, I'm willing to bet that I'm just too simple minded to see the connection to the SR that we arrived at in equation (7),
+  so let's try and derive the SR from an equation that easily gets us to equation (7). I'll write out another definition from Sutton & Barto
+  chapter 3, equation 3.12
+
+  \[
+  v_{\pi}(s) = \mathbb{E}_{\pi} \Bigg[\sum_{t=0}^{\infty} \gamma^t R_{j + t + 1} | S_j = s \Bigg]  \; \; \; \; (10)
+  \]
+
+  for the following step I need to recall equation (3), let's do the same here, but for the next state $s'$, so we would have
+  $r_{\pi}(s') = \sum_{a'}\pi(a' | s') r(s', a')$
+
+  \[
+  v_{\pi}(s) = \mathbb{E}_{\pi}\Bigg[\sum_{t=0}^{\infty} \gamma^t r_{\pi}(S_{j+t}) | S_j = s \Bigg]  \; \; \; \; (11)
+  \]
+
+  and now apply an indicator function:
+
+  \[
+  r_{\pi}(S_{j+t}) = \sum_{s'} r_{\pi}(s')\mathbb{I}\big[S_{j+t} = s'\big]  \; \; \; \; (12)
+  \]
+
+  substitue this back into the value function:
+
+  \[
+  v_{\pi}(s) = \mathbb{E}_{\pi}\Bigg[\sum_{t=0}^{\infty} \gamma^t  \sum_{s'} r_{\pi}(s')\mathbb{I}\big[S_{j+t} = s'\big] | S_j = s \Bigg]  \; \; \; \; (13)
+
+  \]
+
+  as you can see, that there just about looks like the espression for SR, inside of the outer-most expectation. We just need to 
+  justify swamping the order and taking $\sum_{s'} r_{\pi}(s')$ outside of the expectation. Insofar as I can muster, we have
+  to assume that $r_{\pi}(s')$ is a known deterministic function of $s'$, and when that is the case, we can use linearity of 
+  expectation to move it to the outside.
+
+  \[
+  v_{\pi}(s) = \sum_{s'} r_{\pi}(s') \mathbb{E}_{\pi}\Bigg[\sum_{t=0}^{\infty} \gamma^t  \mathbb{I}\big[S_{j+t} = s'\big] | S_j = s \Bigg]
+  \]
+
+  \[
+  \implies v_{\pi}(s) = \sum_{s'} r_{\pi}(s') M_{\pi}(s, s')  \; \; \; \; (14)
+  \]
+
+  OK, enough of the math, we should get to conceptual matters. What is the point of going through the trouble of showing the SR as equation (7)
+  to then go and show equation (8) and in more detail equation (9) ? The first derivation of the SR gives us an extremely simple 
+  way to compute and code it. The second was perhaps misplaced, and the third gives intuition about what it is. 
+
+  To the point of computing the SR, what would one need? We'd need a policy, and it's probabilities: $\pi(a | s)$ and a transition matrix encoding each $P(s'|s, a)$
+  , with that we can compute $P_{\pi}(s, s') = \sum_{a \in A} \pi(a | s) P(s'|s, a)$ and then perform a in-some-cases-simple matrix inversion
+  $M_{\pi} = \big(I  - \gamma P_{\pi}\big)^{-1}$. Alternatively if this matrix inversion is not feasible we can use an iterative method:
+  
+  <!-- Inserted Algorithm -->
+  <div class="algorithm">
+    <h2>Algorithm: Iterative Computation of the Successor Representation (SR)</h2>
+    <pre><code>
+Input:
+  Number of states N
+  State transition matrix under policy π, P_pi ∈ ℝ^{N × N}
+  Discount factor γ ∈ [0, 1)
+  Convergence threshold ε > 0
+
+Output:
+  Successor Representation matrix M_pi ∈ ℝ^{N × N}
+
+Initialize:
+  M_pi^(0) ← I  // Identity matrix of size N × N
+  k ← 0
+  delta ← ∞
+
+While (delta > ε):
+  M_pi^(k+1) ← I + γ * P_pi * M_pi^(k)
+  delta ← || M_pi^(k+1) - M_pi^(k) ||_∞
+  k ← k + 1
+
+M_pi ← M_pi^(k)
+Return M_pi
+    </code></pre>
+  </div>
+
+  <!-- Continue with  content -->
+  Now for the last and perhaps most important point, what is the SR? In English, it's a matrix where each entry gives you value
+  containing information about the current occupancy of state (e.g. is the state  now $s$ equal to $s'$, if so add a value of 1).
+  Add to this a discounted (via $\gamma$) future occupancy: $\sum_a \pi(a|s) \sum_{s''}P(s''|s,a) M_{\pi}(s'', s')$, so:
+
+  \[
+  M_{\pi}(s, s') = \mathbb{I}\big[s=s'\big] + \gamma \sum_{a \in A} \pi(a|s) \sum_{s'' \in S} P(s''|s, a)M_{\pi}(s'', s') \; \; \; \; (15)
+  \]
+
+  and the real gem in equation (15), is the recursion. By noting this recursion we can understand it to encode information for
+  all future steps / time points. 
+
+  <p>
+    OK, I may or may not expand on this in the future, but for now, I hope this is somewhat helpful. 
+  </p>
+
+</div>
+
+<h2>References</h2>
+<ul>
+  <li>
+    Sutton, R. S., & Barto, A. G. (2018). 
+    <em>Reinforcement Learning: An Introduction</em>. 
+    MIT Press. 
+    <a href="http://incompleteideas.net/book/the-book.html" target="_blank">http://incompleteideas.net/book/the-book.html</a>
+  </li>
+  <li>
+    Dayan, P. (1993). 
+    Using general value functions to represent knowledge. 
+    In <em>Proceedings of the 14th Annual Conference on Neural Information Processing Systems</em> (pp. 1123-1129).
+  </li>
+  <li>
+    Gershman, S. (2018). 
+    The Successor Representation: Its Computational Logic and Neural Substrates
+    <em>J. Neurosci</em>, 38(33):7193-7200.
+  </li>
+</ul>
+</div>
+
+</div>
+
+
+</body>
+
+
+</html>
