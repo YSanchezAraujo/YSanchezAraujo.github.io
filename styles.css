@@ -61,3 +61,22 @@ img {
 #unfloated-container{
     width: 1000px;
 }
+
+.algorithm {
+  background-color: #f9f9f9; /* Light grey background */
+  border: 1px solid #ddd;    /* Light border */
+  padding: 15px;             /* Some padding */
+  border-radius: 5px;        /* Rounded corners */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  overflow-x: auto;          /* Horizontal scroll if needed */
+  margin-bottom: 20px;       /* Space below the algorithm */
+}
+
+.algorithm h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.algorithm pre {
+  margin: 0;
+}
