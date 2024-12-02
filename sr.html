@@ -150,7 +150,7 @@
 
   \]
 
-  as you can see, that there just about looks like the espression for SR, inside of the outer-most expectation. We just need to 
+  as you can see, that there just about looks like the expression for SR, inside of the outer-most expectation. We just need to 
   justify swamping the order and taking $\sum_{s'} r_{\pi}(s')$ outside of the expectation. Insofar as I can muster, we have
   to assume that $r_{\pi}(s')$ is a known deterministic function of $s'$, and when that is the case, we can use linearity of 
   expectation to move it to the outside.
@@ -202,7 +202,8 @@ Return M_pi
   <!-- Continue with  content -->
   Now for the last and perhaps most important point, what is the SR? In English, it's a matrix where each entry gives you value
   containing information about the current occupancy of state (e.g. is the state  now $s$ equal to $s'$, if so add a value of 1).
-  Add to this a discounted (via $\gamma$) future occupancy: $\sum_a \pi(a|s) \sum_{s''}P(s''|s,a) M_{\pi}(s'', s')$, so:
+  Add to this a discounted (via $\gamma$) future occupancy: $\sum_a \pi(a|s) \sum_{s''}P(s''|s,a) M_{\pi}(s'', s')$, so if we consider the SR
+  for a single timestep:
 
   \[
   M_{\pi}(s, s') = \mathbb{I}\big[s=s'\big] + \gamma \sum_{a \in A} \pi(a|s) \sum_{s'' \in S} P(s''|s, a)M_{\pi}(s'', s') \; \; \; \; (15)
