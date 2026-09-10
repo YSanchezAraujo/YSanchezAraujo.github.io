@@ -1,59 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Readings - YSA</title>
+  <title>Readings — Yoel Sanchez Araujo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+  <meta name="description" content="Papers I recommend for learning machine learning concepts.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <div class="header">
-    <a href="index.html" class="logo"><span class="prompt-sym">~/</span>about-me<span class="cursor"></span></a>
-    <div class="header-right">
-      <a href="index.html">home</a>
-      <a href="https://github.com/YSanchezAraujo">github</a>
-      <a href="writing.html">writing</a>
-      <a class="active" href="readings.html">readings</a>
-      <a href="https://twitter.com/ysanchezaraujo">twitter</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Yoel Sanchez Araujo</a>
+    <nav class="site-nav">
+      <a href="index.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="readings.html" aria-current="page">Readings</a>
+      <a href="https://github.com/YSanchezAraujo">GitHub</a>
+      <a href="https://twitter.com/ysanchezaraujo">Twitter</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-body">
+
+      <p class="eyebrow">Readings</p>
+      <h1>Papers I recommend</h1>
+      <p class="lede">
+        The clearest treatments I have found of a few machine learning ideas
+      </p>
+
+      <ul class="entries">
+        <li>
+          <a href="https://arxiv.org/abs/1906.02691">An introduction to variational autoencoders</a>
+          <span class="note">Kingma &amp; Welling, 2019</span>
+        </li>
+        <li>
+          <a href="https://www.jmlr.org/papers/volume21/19-346/19-346.pdf">Monte Carlo gradient estimation in machine learning</a>
+          <span class="note">Mohamed, Rosca, Figurnov &amp; Mnih, JMLR 2020</span>
+        </li>
+        <li>
+          <a href="https://www.jmlr.org/papers/volume22/19-1028/19-1028.pdf">Normalizing flows for probabilistic modeling and inference</a>
+          <span class="note">Papamakarios et al., JMLR 2021</span>
+        </li>
+        <li>
+          <a href="https://arxiv.org/pdf/2406.08929">Tutorial on diffusion models for imaging and vision</a>
+          <span class="note">Chan, 2024</span>
+        </li>
+      </ul>
+
+
     </div>
-  </div>
+  </main>
 
-  <div class="term">
-    <div class="term-bar">
-      <span class="term-dot red"></span>
-      <span class="term-dot yellow"></span>
-      <span class="term-dot green"></span>
-      <span class="term-title">yoel@ysa: ~/readings</span>
-    </div>
-    <div class="term-body">
-
-      <p class="prompt-h">cat <b>reading-list.md</b></p>
-
-      <div class="unfloated-container">
-        <h1>Papers that I like for learning about ML concepts</h1>
-        <div class="list-panel">
-          <ul>
-            <li><a href="https://arxiv.org/abs/1906.02691">Variational autoencoders</a></li>
-            <li><a href="https://www.jmlr.org/papers/volume21/19-346/19-346.pdf">Monte Carlo gradient estimation</a></li>
-            <li><a href="https://www.jmlr.org/papers/volume22/19-1028/19-1028.pdf">Normalizing flows</a></li>
-            <li><a href="https://arxiv.org/pdf/2406.08929">Diffusion models tutorial</a></li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="footer">
-    <span>&copy; ysanchezaraujo &middot; built with vim energy</span>
-    <span class="brew">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 9h13a3 3 0 0 1 0 6h-1"/><path d="M4 9v7a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9"/><path d="M7 6c0-1 1-1 1-2s-1-1-1-2"/><path d="M11 6c0-1 1-1 1-2s-1-1-1-2"/></svg>
-      fueled by coffee
-    </span>
-  </div>
+  <footer class="site-footer">
+    &copy; Yoel Sanchez Araujo
+  </footer>
 
 </body>
 
