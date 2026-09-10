@@ -2,56 +2,48 @@
 <html lang="en">
 
 <head>
-  <title>Writing - YSA</title>
+  <title>Writing — Yoel Sanchez Araujo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+  <meta name="description" content="Notes and essays on reinforcement learning and statistics.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <div class="header">
-    <a href="index.html" class="logo"><span class="prompt-sym">~/</span>about-me<span class="cursor"></span></a>
-    <div class="header-right">
-      <a href="index.html">home</a>
-      <a href="https://github.com/YSanchezAraujo">github</a>
-      <a class="active" href="writing.html">writing</a>
-      <a href="readings.html">readings</a>
-      <a href="https://twitter.com/ysanchezaraujo">twitter</a>
-    </div>
-  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html">Yoel Sanchez Araujo</a>
+    <nav class="site-nav">
+      <a href="index.html">About</a>
+      <a href="writing.html" aria-current="page">Writing</a>
+      <a href="readings.html">Readings</a>
+      <a href="https://github.com/YSanchezAraujo">GitHub</a>
+      <a href="https://twitter.com/ysanchezaraujo">Twitter</a>
+    </nav>
+  </header>
 
-  <div class="term">
-    <div class="term-bar">
-      <span class="term-dot red"></span>
-      <span class="term-dot yellow"></span>
-      <span class="term-dot green"></span>
-      <span class="term-title">yoel@ysa: ~/writing</span>
-    </div>
-    <div class="term-body">
+  <main class="page">
+    <div class="page-body">
 
-      <p class="prompt-h">ls <b>./writing</b></p>
+      <p class="eyebrow">Writing</p>
+      <h1>Notes and essays</h1>
 
-      <div class="unfloated-container">
-        <h1>Writing for the interwebs</h1>
-        <div class="list-panel">
-          <ul>
-            <li><a href="sr.html">Random things on the Successor Representation</a></li>
-          </ul>
-        </div>
-      </div>
+      <ul class="entries">
+        <li>
+          <a href="sr.html">Random things on the successor representation</a>
+          <span class="note">Working the SR out of the Bellman equation</span>
+        </li>
+      </ul>
+
 
     </div>
-  </div>
+  </main>
 
-  <div class="footer">
-    <span>&copy; ysanchezaraujo &middot; built with vim energy</span>
-    <span class="brew">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 9h13a3 3 0 0 1 0 6h-1"/><path d="M4 9v7a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9"/><path d="M7 6c0-1 1-1 1-2s-1-1-1-2"/><path d="M11 6c0-1 1-1 1-2s-1-1-1-2"/></svg>
-      fueled by coffee
-    </span>
-  </div>
+  <footer class="site-footer">
+    &copy; Yoel Sanchez Araujo
+  </footer>
 
 </body>
 
 </html>
+
